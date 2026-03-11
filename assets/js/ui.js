@@ -121,7 +121,9 @@ function updateHistoryStrip(history, onSwatchClick) {
     const swatch = document.createElement('button');
     swatch.className = 'history-swatch';
     swatch.style.backgroundColor = colorObj.hex;
-    swatch.setAttribute('title', `${colorObj.nameId} — ${colorObj.hex}`);
+
+    // Data attributes untuk custom tooltip CSS
+    swatch.setAttribute('data-tooltip', `${colorObj.nameId}\n${colorObj.hex}`);
     swatch.setAttribute('aria-label', `Warna ${index + 1}: ${colorObj.nameId} ${colorObj.hex}`);
 
     swatch.addEventListener('click', () => {
@@ -246,7 +248,15 @@ function showToast(message, duration = 2000) {
 function showCameraError(message) {
   const overlay = document.getElementById('error-overlay');
   if (!overlay) return;
-  overlay.textContent = message;
+
+  // Isi hanya elemen #error-message, jangan timpa seluruh struktur HTML overlay
+  const msgEl = document.getElementById('error-message');
+  if (msgEl) {
+    msgEl.textContent = message;
+  } else {
+    overlay.textContent = message;
+  }
+
   overlay.removeAttribute('hidden');
 }
 
@@ -257,7 +267,10 @@ function hideCameraError() {
   const overlay = document.getElementById('error-overlay');
   if (!overlay) return;
   overlay.setAttribute('hidden', '');
-  overlay.textContent = '';
+
+  // Reset teks pesan tapi pertahankan struktur HTML
+  const msgEl = document.getElementById('error-message');
+  if (msgEl) msgEl.textContent = 'Terjadi kesalahan kamera.';
 }
 
 // ─────────────────────────────────────────────
@@ -271,8 +284,24 @@ function hideCameraError() {
 function updateFreezeButton(isFrozen) {
   const btn = document.getElementById('btn-freeze');
   if (!btn) return;
-  btn.textContent = isFrozen ? 'Resume' : 'Freeze';
+
+  // Update teks span
+  const span = btn.querySelector('span');
+  if (span) span.textContent = isFrozen ? 'Resume' : 'Freeze';
+
+  // Swap ikon pause ↔ play
+  const iconPause = document.getElementById('icon-pause');
+  const iconPlay  = document.getElementById('icon-play');
+  if (iconPause) iconPause.hidden = isFrozen;
+  if (iconPlay)  iconPlay.hidden  = !isFrozen;
+
+  // Toggle aria-pressed untuk aksesibilitas
+  btn.setAttribute('aria-pressed', isFrozen ? 'true' : 'false');
   btn.classList.toggle('btn-active', isFrozen);
+
+  // Tampilkan / sembunyikan badge FROZEN di video
+  const badge = document.getElementById('frozen-badge');
+  if (badge) badge.hidden = !isFrozen;
 }
 
 // ─────────────────────────────────────────────

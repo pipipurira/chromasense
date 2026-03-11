@@ -38,6 +38,14 @@
       <video id="video-feed" autoplay playsinline muted></video>
       <canvas id="crosshair-overlay"></canvas>
 
+      <!-- Badge FROZEN -->
+      <div id="frozen-badge" hidden>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        FROZEN
+      </div>
+
       <!-- Error overlay -->
       <div id="error-overlay" hidden>
         <div class="error-inner">
@@ -64,9 +72,14 @@
 
     <!-- CONTROLS BAR -->
     <div id="controls-bar">
-      <button id="btn-freeze" class="btn-control" disabled>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <button id="btn-freeze" class="btn-control" disabled aria-pressed="false">
+        <!-- Ikon Pause (ditampilkan saat live) -->
+        <svg id="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+        </svg>
+        <!-- Ikon Play (ditampilkan saat frozen) -->
+        <svg id="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" hidden>
+          <polygon points="5 3 19 12 5 21 5 3"/>
         </svg>
         <span>Freeze</span>
       </button>

@@ -51,6 +51,49 @@ body {
   color: #888;
 }
 
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: conic-gradient(#ff5733, #ffd700, #3498db, #2ecc71, #ff5733);
+  flex-shrink: 0;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.logo-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.logo-accent {
+  color: #7dd3fc;
+}
+
+.tagline {
+  font-size: 0.78rem;
+  color: #666;
+  margin-left: 22px;
+}
+
 /* ─────────────────────────────────────────────
    CAMERA ZONE
 ───────────────────────────────────────────── */
@@ -87,11 +130,78 @@ body {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  text-align: center;
+}
+
+.error-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.error-icon {
+  font-size: 2rem;
+}
+
+#error-message {
   color: #ff6b6b;
   font-size: 1rem;
   font-weight: 500;
-  padding: 20px;
-  text-align: center;
+  max-width: 280px;
+  line-height: 1.5;
+}
+
+/* Camera Placeholder */
+#camera-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0a0a;
+}
+
+.placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: #555;
+}
+
+.placeholder-icon {
+  opacity: 0.4;
+}
+
+.placeholder-inner p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.btn-primary {
+  min-height: 44px;
+  padding: 10px 24px;
+  border: 1px solid #3a7cd5;
+  border-radius: 8px;
+  background: #1a3a6a;
+  color: #7dd3fc;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background: #2a5caa;
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
 }
 
 /* ─────────────────────────────────────────────
@@ -106,7 +216,7 @@ body {
   flex-wrap: wrap;
 }
 
-#controls-bar button {
+.btn-control {
   min-height: 44px;
   min-width: 44px;
   padding: 0 18px;
@@ -117,18 +227,57 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-#controls-bar button:hover {
+.btn-control:hover:not(:disabled) {
   background: #333;
   border-color: #666;
 }
 
-#controls-bar button.btn-active {
-  background: #2a5caa;
+.btn-control:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* State aktif tombol Freeze */
+.btn-control.btn-active {
+  background: #0f3460;
   border-color: #3a7cd5;
-  color: #fff;
+  color: #7dd3fc;
+}
+
+.btn-control.btn-active:hover {
+  background: #1a4a80;
+}
+
+/* Badge FROZEN di atas video */
+#frozen-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(10, 40, 90, 0.85);
+  color: #7dd3fc;
+  border: 1px solid #3a7cd5;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
 }
 
 /* ─────────────────────────────────────────────
@@ -246,23 +395,96 @@ body {
   background: #0e0e0e;
   border-top: 1px solid #2a2a2a;
   overflow-x: auto;
-  min-height: 56px;
+  min-height: 64px;
+  /* Scrollbar tipis */
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
 }
 
+#history-strip::-webkit-scrollbar {
+  height: 4px;
+}
+
+#history-strip::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
+
+.history-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Swatch wrapper untuk posisi tooltip */
 .history-swatch {
-  width: 36px;
-  height: 36px;
+  position: relative;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  border: 2px solid #444;
+  border: 2px solid #3a3a3a;
   cursor: pointer;
   flex-shrink: 0;
-  transition: transform 0.15s, border-color 0.15s;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
   padding: 0;
+  background: transparent;
 }
 
 .history-swatch:hover {
-  transform: scale(1.2);
+  transform: scale(1.25) translateY(-3px);
   border-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Custom tooltip via CSS */
+.history-swatch::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e1e1e;
+  color: #f0f0f0;
+  font-size: 0.72rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 500;
+  white-space: pre;        /* agar \n jadi baris baru */
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s, transform 0.15s;
+  transform: translateX(-50%) translateY(4px);
+  z-index: 100;
+  text-align: center;
+  line-height: 1.5;
+  min-width: 80px;
+}
+
+/* Arrow tooltip */
+.history-swatch::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #333;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 100;
+}
+
+.history-swatch:hover::after,
+.history-swatch:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .history-empty {
@@ -318,6 +540,73 @@ body {
   #color-preview {
     height: 70px;
   }
+
+  .btn-control span {
+    display: none; /* Hanya tampilkan ikon di layar sangat kecil */
+  }
+
+  .btn-control {
+    padding: 0 14px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE — TABLET (768px – 1023px)
+───────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #app-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #video-feed {
+    max-height: 50vw;
+  }
+
+  #controls-bar {
+    padding: 12px 20px;
+    gap: 12px;
+  }
+
+  .btn-control {
+    min-height: 48px;
+    padding: 0 22px;
+    font-size: 0.95rem;
+  }
+
+  #color-panel {
+    padding: 18px 20px;
+  }
+
+  #color-preview {
+    height: 90px;
+  }
+
+  #name-id {
+    font-size: 1.45rem;
+  }
+
+  #history-strip {
+    padding: 12px 20px;
+    min-height: 68px;
+    gap: 10px;
+  }
+
+  .history-swatch {
+    width: 42px;
+    height: 42px;
+  }
+
+  #color-values {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .value-chip {
+    flex: 1;
+    min-width: 120px;
+  }
 }
 
 /* ─────────────────────────────────────────────
@@ -372,6 +661,42 @@ body {
   #name-id {
     font-size: 1.6rem;
   }
+}
+
+/* Label lang ID / EN */
+.label-lang {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #555;
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* Value chips HEX / RGB / HSL */
+.value-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chip-label {
+  font-size: 0.65rem !important;
+  font-weight: 700;
+  color: #555 !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.chip-value {
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 0.95rem;
+  color: #e0e0e0;
 }
 
 /* ─────────────────────────────────────────────
