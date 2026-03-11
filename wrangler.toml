@@ -1,0 +1,19 @@
+# wrangler.toml — Cloudflare Pages configuration
+# ChromaSense v1.0
+# Docs: https://developers.cloudflare.com/pages/
+
+name = "chromasense"
+compatibility_date = "2026-03-11"
+
+# Pages project settings
+[env.production]
+# Tidak ada build command — static HTML/JS/CSS langsung deploy
+# Build output: root directory (/)
+
+# ---- Branch deployment ----
+# main     → production  (chromasense.pages.dev)
+# develop  → preview     (*.chromasense.pages.dev)
+
+# ---- Custom domain (opsional) ----
+# Atur di Cloudflare Dashboard > Pages > Custom domains
+# Contoh: chromasense.yourdomain.com
