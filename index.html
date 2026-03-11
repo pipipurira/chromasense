@@ -122,7 +122,6 @@
       <span class="history-label">Histori</span>
       <div id="history-swatches">
         <!-- Diisi dinamis oleh ui.js -->
-        <div class="history-empty">Belum ada warna tersimpan</div>
       </div>
     </div>
 
@@ -131,7 +130,13 @@
   <!-- TOAST NOTIFICATION -->
   <div id="toast" role="status" aria-live="polite" hidden></div>
 
-  <!-- JS Modules -->
-  <script type="module" src="assets/js/main.js"></script>
+  <!-- JS — urutan load penting, jangan diubah -->
+  <script src="assets/js/state.js"></script>
+  <script src="assets/js/colorDB.js"></script>
+  <script src="assets/js/colorEngine.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/camera.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

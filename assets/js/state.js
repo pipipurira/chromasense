@@ -1,41 +1,47 @@
 /**
- * state.js — AppState singleton
- * Menyimpan seluruh runtime state ChromaSense.
- * Tidak ada side effects. Diakses oleh modul lain.
+ * state.js
+ * ChromaSense - Fase 2
+ * AppState singleton — satu-satunya sumber kebenaran (single source of truth)
+ * untuk status aplikasi saat ini.
+ *
+ * Tidak ada persistence — state reset saat tab ditutup/refresh.
  */
 
 const AppState = {
-  /** @type {Object|null} ColorObject aktif */
+  /** ColorObject aktif saat ini: { r, g, b, hex, hsl, nameId, nameEn, timestamp } */
   currentColor: null,
 
-  /** @type {Object[]} Histori warna, max 8 item */
+  /** Array ColorObject, max 8 item, urutan terbaru di depan */
   history: [],
 
-  /** @type {boolean} Apakah video sedang di-freeze */
+  /** Boolean: apakah video sedang di-freeze */
   isFrozen: false,
 
-  /** @type {MediaStream|null} Stream kamera aktif */
+  /** MediaStream aktif dari getUserMedia */
   activeStream: null,
 
-  /** @type {string|null} deviceId kamera aktif */
+  /** deviceId kamera yang sedang aktif */
   activeCameraId: null,
 
-  /** @type {boolean} Apakah kamera sudah aktif */
-  isCameraActive: false,
-
   /**
-   * Simpan warna baru dan tambahkan ke histori.
-   * @param {Object} color - ColorObject
+   * Set warna aktif dan tambahkan ke histori.
+   * Histori dibatasi 8 item, entry duplikat (HEX sama) tidak ditambahkan ulang.
+   * @param {Object} colorObj
    */
-  setColor(color) {
-    this.currentColor = color;
-    // Tambahkan di awal, batasi 8 item
-    this.history = [color, ...this.history].slice(0, 8);
+  setColor(colorObj) {
+    this.currentColor = colorObj;
+
+    // Hindari duplikat HEX berurutan
+    if (this.history.length > 0 && this.history[0].hex === colorObj.hex) {
+      return;
+    }
+
+    this.history = [colorObj, ...this.history].slice(0, 8);
   },
 
   /**
    * Toggle freeze state.
-   * @returns {boolean} isFrozen setelah toggle
+   * @returns {boolean} State freeze setelah toggle
    */
   toggleFreeze() {
     this.isFrozen = !this.isFrozen;
@@ -44,13 +50,15 @@ const AppState = {
 
   /**
    * Reset semua state ke kondisi awal.
+   * Berguna untuk testing atau reset manual.
    */
   reset() {
     this.currentColor = null;
     this.history = [];
     this.isFrozen = false;
-    this.isCameraActive = false;
+    // activeStream dan activeCameraId TIDAK di-reset di sini
+    // karena stream harus di-stop secara eksplisit via Camera.stop()
   }
 };
 
-export default AppState;
+window.AppState = AppState;
