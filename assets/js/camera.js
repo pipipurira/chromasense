@@ -9,7 +9,7 @@
  * @param {string|null} deviceId - deviceId spesifik (null = default)
  * @returns {Promise<MediaStream>}
  */
-export async function startCamera(videoElement, deviceId = null) {
+async function startCamera(videoElement, deviceId = null) {
   const constraints = {
     video: {
       facingMode: deviceId ? undefined : 'environment',
@@ -33,7 +33,7 @@ export async function startCamera(videoElement, deviceId = null) {
  * Stop semua track pada MediaStream.
  * @param {MediaStream} stream
  */
-export function stopCamera(stream) {
+function stopCamera(stream) {
   if (!stream) return;
   stream.getTracks().forEach(track => track.stop());
 }
@@ -43,7 +43,7 @@ export function stopCamera(stream) {
  * Note: Label hanya tersedia setelah izin diberikan.
  * @returns {Promise<MediaDeviceInfo[]>}
  */
-export async function getAvailableCameras() {
+async function getAvailableCameras() {
   const devices = await navigator.mediaDevices.enumerateDevices();
   return devices.filter(d => d.kind === 'videoinput');
 }
@@ -52,7 +52,7 @@ export async function getAvailableCameras() {
  * Cek apakah MediaDevices API tersedia di browser ini.
  * @returns {boolean}
  */
-export function isMediaDevicesSupported() {
+function isMediaDevicesSupported() {
   return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
 }
 
@@ -88,3 +88,13 @@ function categorizeError(err) {
   error.isOverconstrained = err.name === 'OverconstrainedError';
   return error;
 }
+
+// Export global — konsisten dengan modul lain (window.X pattern)
+// main.js memanggil Camera.start(), Camera.stop(), dll.
+window.Camera = {
+  start: startCamera,
+  stop: stopCamera,
+  getAvailableCameras,
+  startWithDeviceId: (videoElement, deviceId) => startCamera(videoElement, deviceId),
+  isSupported: isMediaDevicesSupported
+};

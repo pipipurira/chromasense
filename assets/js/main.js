@@ -89,7 +89,6 @@ async function startCameraFlow(videoEl, crosshairCanvas) {
     console.error('[ChromaSense] Gagal start kamera:', err);
   }
 }
-}
 
 // ─────────────────────────────────────────────
 // EVENT BINDING
