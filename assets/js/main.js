@@ -2,8 +2,7 @@
  * main.js — Entry point ChromaSense.
  * Inisialisasi app, binding event listener, orkestrasi modul.
  *
- * Fase 0: Struktur lengkap, kamera stub siap.
- *         Fase 1 akan mengaktifkan pixel sampling.
+ * Fase 1: Webcam access, pixel sampling, color detection aktif.
  */
 
 import AppState from './state.js';
@@ -80,6 +79,8 @@ function bindEvents() {
 
   // Klik / tap pada video zone untuk sampling warna
   $cameraZone.addEventListener('click', handleVideoClick);
+  // Touch support untuk mobile
+  $cameraZone.addEventListener('touchend', handleVideoClick, { passive: true });
 
   // Tombol Freeze / Resume
   $btnFreeze.addEventListener('click', handleFreeze);
@@ -119,6 +120,8 @@ async function handleStartCamera() {
     updateSwitchCameraButton(availableCameras.length > 1);
 
     onCameraStarted();
+    // Sync canvas size setelah placeholder tersembunyi
+    syncCanvasSize($crosshairCanvas, $cameraZone);
     console.log('[ChromaSense] Kamera aktif.');
   } catch (err) {
     console.error('[ChromaSense] Kamera gagal:', err);
@@ -150,6 +153,9 @@ function handleVideoClick(e) {
   const touch = e.touches ? e.touches[0] : e;
   const clickX = touch.clientX;
   const clickY = touch.clientY;
+
+  // Pastikan ukuran canvas selalu sinkron
+  syncCanvasSize($crosshairCanvas, $cameraZone);
 
   // Gambar crosshair di posisi klik (koordinat relatif canvas)
   const rect = $cameraZone.getBoundingClientRect();
