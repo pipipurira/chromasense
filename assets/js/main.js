@@ -192,7 +192,9 @@ function handleVideoClick(event, videoEl, crosshairCanvas) {
   const rect = videoEl.getBoundingClientRect();
   const clickX = (event.clientX !== undefined ? event.clientX : event.pageX) - rect.left;
   const clickY = (event.clientY !== undefined ? event.clientY : event.pageY) - rect.top;
-  UI.drawCrosshair(crosshairCanvas, clickX, clickY);
+  // Flip X crosshair agar sinkron dengan video yang di-mirror
+  const mirroredX = rect.width - clickX;
+  UI.drawCrosshair(crosshairCanvas, mirroredX, clickY);
 
   // Bangun ColorObject lengkap
   const colorObj = ColorEngine.buildColorObject(r, g, b, ColorDB.getAll());
