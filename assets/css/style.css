@@ -539,7 +539,7 @@ body {
   /* Video: aspect ratio 16:9 natural kamera, full-width, tidak terpotong */
   #video-feed {
     max-height: none;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     width: 100%;
     object-fit: cover;
   }
