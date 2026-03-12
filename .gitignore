@@ -1,0 +1,26 @@
+# ChromaSense .gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node (jika pakai local tooling)
+node_modules/
+npm-debug.log*
+
+# Cloudflare Wrangler
+.wrangler/
+.dev.vars
+
+# Local env
+.env
+.env.local
+
+# Build artifacts (tidak ada untuk fase ini)
+dist/
