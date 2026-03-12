@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="ChromaSense — Deteksi warna real-time dari kamera webmu." />
+  <title>ChromaSense</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="app-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <div class="logo-dot" id="logo-dot"></div>
+        <span class="logo-name">Chroma<span class="logo-accent">Sense</span></span>
+      </div>
+      <p class="tagline">Tunjuk. Klik. Kenali warnanya.</p>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main id="app-main">
+
+    <!-- VIDEO ZONE -->
+    <section id="camera-zone">
+      <video id="video-feed" autoplay playsinline muted></video>
+      <canvas id="crosshair-overlay"></canvas>
+
+      <!-- Badge FROZEN -->
+      <div id="frozen-badge" hidden>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        FROZEN
+      </div>
+
+      <!-- Error overlay -->
+      <div id="error-overlay" hidden>
+        <div class="error-inner">
+          <div class="error-icon">⚠</div>
+          <p id="error-message">Terjadi kesalahan kamera.</p>
+          <button id="btn-retry" class="btn-primary">Coba Lagi</button>
+        </div>
+      </div>
+
+      <!-- Placeholder saat kamera belum aktif -->
+      <div id="camera-placeholder">
+        <div class="placeholder-inner">
+          <div class="placeholder-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M23 7l-7 5 7 5V7z"/>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+            </svg>
+          </div>
+          <p>Klik tombol di bawah untuk mulai</p>
+          <button id="btn-start-camera" class="btn-primary">Aktifkan Kamera</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTROLS BAR -->
+    <div id="controls-bar">
+      <button id="btn-freeze" class="btn-control" disabled aria-pressed="false">
+        <!-- Ikon Pause (ditampilkan saat live) -->
+        <svg id="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+        </svg>
+        <!-- Ikon Play (ditampilkan saat frozen) -->
+        <svg id="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" hidden>
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        <span>Freeze</span>
+      </button>
+      <button id="btn-switch-camera" class="btn-control" disabled>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 7h-9M14 17H5M17 4l3 3-3 3M7 14l-3 3 3 3"/>
+        </svg>
+        <span>Ganti Kamera</span>
+      </button>
+    </div>
+
+    <!-- COLOR INFO PANEL -->
+    <section id="color-panel">
+      <div id="color-preview-wrap">
+        <div id="color-preview"></div>
+        <div id="color-preview-label">—</div>
+      </div>
+
+      <div id="color-info">
+        <div class="color-names">
+          <span class="label-lang">ID</span>
+          <span id="name-id" class="color-name-main">Belum ada warna</span>
+          <span class="label-lang">EN</span>
+          <span id="name-en" class="color-name-sub">No color yet</span>
+        </div>
+
+        <div id="color-values">
+          <div class="value-chip">
+            <span class="chip-label">HEX</span>
+            <span id="val-hex" class="chip-value">—</span>
+          </div>
+          <div class="value-chip">
+            <span class="chip-label">RGB</span>
+            <span id="val-rgb" class="chip-value">—</span>
+          </div>
+          <div class="value-chip">
+            <span class="chip-label">HSL</span>
+            <span id="val-hsl" class="chip-value">—</span>
+          </div>
+        </div>
+
+        <button id="btn-copy-hex" class="btn-primary" disabled>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+          </svg>
+          Salin HEX
+        </button>
+      </div>
+    </section>
+
+    <!-- HISTORY STRIP -->
+    <div id="history-strip">
+      <span class="history-label">Histori</span>
+      <div id="history-swatches">
+        <!-- Diisi dinamis oleh ui.js -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- JS — urutan load penting, jangan diubah -->
+  <script src="assets/js/state.js"></script>
+  <script src="assets/js/colorDB.js"></script>
+  <script src="assets/js/colorEngine.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/camera.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
