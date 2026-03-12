@@ -1,13 +1,14 @@
 # _headers — Cloudflare Pages HTTP Security Headers
 # ChromaSense v1.0
 # Docs: https://developers.cloudflare.com/pages/platform/headers/
+# FIX: Headers sebelumnya dikomentari dan tidak aktif — sekarang diaktifkan.
 
 /*
   # Content Security Policy
-  # - script-src 'self' cdn.tailwindcss.com fonts.googleapis.com
-  #   Izinkan Tailwind CDN dan Google Fonts
-  # - media-src 'self' blob:
-  #   Wajib untuk MediaStream (blob URL dari getUserMedia)
+  # - script-src: izinkan Tailwind CDN dan Google Fonts
+  # - style-src: 'unsafe-inline' diperlukan untuk Tailwind utility classes
+  # - media-src blob: wajib untuk MediaStream dari getUserMedia()
+  # - connect-src: izinkan fetch ke assets lokal (colors.json)
   Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self' blob:; img-src 'self' data:; connect-src 'self'
 
   # Cegah MIME type sniffing
@@ -19,7 +20,7 @@
   # Jangan kirim referrer ke domain lain
   Referrer-Policy: no-referrer
 
-  # Paksa HTTPS selama 1 tahun (hati-hati: non-reversible di browser)
+  # Paksa HTTPS selama 1 tahun
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
   # Batasi akses fitur browser yang tidak dipakai

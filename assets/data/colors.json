@@ -330,11 +330,6 @@
     "nameEn": "Amber Yellow"
   },
   {
-    "hex": "#FF8F00",
-    "nameId": "Kuning Tua",
-    "nameEn": "Dark Yellow"
-  },
-  {
     "hex": "#F9A825",
     "nameId": "Kuning Jagung",
     "nameEn": "Corn Yellow"
@@ -965,11 +960,6 @@
     "nameEn": "Deep Pink Accent"
   },
   {
-    "hex": "#A52A2A",
-    "nameId": "Cokelat",
-    "nameEn": "Brown"
-  },
-  {
     "hex": "#6B3A2A",
     "nameId": "Cokelat Tua",
     "nameEn": "Dark Brown"
@@ -1135,11 +1125,6 @@
     "nameEn": "Light Coral Red"
   },
   {
-    "hex": "#FFFFF0",
-    "nameId": "Krem Gading",
-    "nameEn": "Ivory"
-  },
-  {
     "hex": "#FAEBD7",
     "nameId": "Krem Putih",
     "nameEn": "Antique White"
@@ -1283,11 +1268,6 @@
     "hex": "#E0E0E0",
     "nameId": "Abu Sangat Muda",
     "nameEn": "Very Light Gray"
-  },
-  {
-    "hex": "#F5F5F5",
-    "nameId": "Abu Putih Material",
-    "nameEn": "Material White Gray"
   },
   {
     "hex": "#FF5252",
@@ -1470,11 +1450,6 @@
     "nameEn": "Amber Sunflower"
   },
   {
-    "hex": "#FF8F00",
-    "nameId": "Kuning Oranye Tua",
-    "nameEn": "Dark Amber"
-  },
-  {
     "hex": "#FF6F00",
     "nameId": "Kuning Oranye Pekat",
     "nameEn": "Deep Amber"
@@ -1520,26 +1495,6 @@
     "nameEn": "Medium Teal"
   },
   {
-    "hex": "#00897B",
-    "nameId": "Teal Kuat",
-    "nameEn": "Strong Teal"
-  },
-  {
-    "hex": "#00796B",
-    "nameId": "Teal Tua",
-    "nameEn": "Dark Teal Strong"
-  },
-  {
-    "hex": "#00695C",
-    "nameId": "Teal Gelap",
-    "nameEn": "Very Dark Teal"
-  },
-  {
-    "hex": "#004D40",
-    "nameId": "Teal Hitam",
-    "nameEn": "Black Teal"
-  },
-  {
     "hex": "#FCF3CF",
     "nameId": "Kuning Krim Muda",
     "nameEn": "Light Cream Yellow"
@@ -1575,11 +1530,6 @@
     "nameEn": "Material Orange"
   },
   {
-    "hex": "#F57C00",
-    "nameId": "Oranye Material Tua",
-    "nameEn": "Material Dark Orange"
-  },
-  {
     "hex": "#E65100",
     "nameId": "Oranye Material Pekat",
     "nameEn": "Material Deep Orange"
@@ -1595,29 +1545,9 @@
     "nameEn": "Material Yellow"
   },
   {
-    "hex": "#FF6F00",
-    "nameId": "Oranye Material Sangat Tua",
-    "nameEn": "Material Very Dark Orange"
-  },
-  {
-    "hex": "#E91E63",
-    "nameId": "Pink Material Cerah",
-    "nameEn": "Material Bright Pink"
-  },
-  {
-    "hex": "#880E4F",
-    "nameId": "Pink Material Sangat Tua",
-    "nameEn": "Material Very Dark Pink"
-  },
-  {
     "hex": "#AD1457",
     "nameId": "Pink Material Tua",
     "nameEn": "Material Medium Dark Pink"
-  },
-  {
-    "hex": "#C2185B",
-    "nameId": "Pink Material Gelap",
-    "nameEn": "Material Dark Pink Saturated"
   },
   {
     "hex": "#D81B60",
@@ -1628,11 +1558,6 @@
     "hex": "#F06292",
     "nameId": "Pink Material Sedang Muda",
     "nameEn": "Material Medium Light Pink"
-  },
-  {
-    "hex": "#F48FB1",
-    "nameId": "Pink Material Muda",
-    "nameEn": "Material Light Pink Pastel"
   },
   {
     "hex": "#F8BBD9",
@@ -1658,11 +1583,6 @@
     "hex": "#8E24AA",
     "nameId": "Ungu Sedang Tua Material",
     "nameEn": "Material Medium Dark Purple"
-  },
-  {
-    "hex": "#CE93D8",
-    "nameId": "Ungu Muda Material",
-    "nameEn": "Material Light Purple Muted"
   },
   {
     "hex": "#E1BEE7",
@@ -1780,11 +1700,6 @@
     "nameEn": "Very Pale Lime"
   },
   {
-    "hex": "#263238",
-    "nameId": "Biru Gelap Tua",
-    "nameEn": "Blue Dark Deep"
-  },
-  {
     "hex": "#37474F",
     "nameId": "Abu Biru Gelap",
     "nameEn": "Blue Gray Deep"
@@ -1845,19 +1760,9 @@
     "nameEn": "Pale Cyan"
   },
   {
-    "hex": "#80DEEA",
-    "nameId": "Biru Tosca Muda",
-    "nameEn": "Light Cyan Blue"
-  },
-  {
     "hex": "#4DD0E1",
     "nameId": "Biru Tosca Sedang Muda",
     "nameEn": "Medium Light Cyan"
-  },
-  {
-    "hex": "#26C6DA",
-    "nameId": "Tosca Vivid",
-    "nameEn": "Vivid Teal"
   },
   {
     "hex": "#00ACC1",
@@ -1925,11 +1830,6 @@
     "nameEn": "Strong Indigo Accent"
   },
   {
-    "hex": "#ECEFF1",
-    "nameId": "Abu Biru Cerah",
-    "nameEn": "Blue Gray Light Extra"
-  },
-  {
     "hex": "#FFF9C4",
     "nameId": "Kuning Sangat Muda",
     "nameEn": "Very Light Yellow"
@@ -1940,16 +1840,6 @@
     "nameEn": "Pale Yellow Fresh"
   },
   {
-    "hex": "#FFF176",
-    "nameId": "Kuning Segar",
-    "nameEn": "Fresh Yellow"
-  },
-  {
-    "hex": "#FFEE58",
-    "nameId": "Kuning Vivid",
-    "nameEn": "Vivid Yellow"
-  },
-  {
     "hex": "#FFEB3B",
     "nameId": "Kuning Material",
     "nameEn": "Material Yellow"
@@ -1958,11 +1848,6 @@
     "hex": "#FDD835",
     "nameId": "Kuning Material Sedang",
     "nameEn": "Material Medium Yellow"
-  },
-  {
-    "hex": "#F9A825",
-    "nameId": "Kuning Material Tua",
-    "nameEn": "Material Dark Yellow"
   },
   {
     "hex": "#F57F17",
@@ -2075,19 +1960,9 @@
     "nameEn": "Old Rose"
   },
   {
-    "hex": "#B8860B",
-    "nameId": "Emas Antik",
-    "nameEn": "Antique Gold"
-  },
-  {
     "hex": "#CC9900",
     "nameId": "Emas Tua",
     "nameEn": "Old Gold"
-  },
-  {
-    "hex": "#FFD700",
-    "nameId": "Emas Murni",
-    "nameEn": "Pure Gold"
   },
   {
     "hex": "#FFC300",
@@ -2130,11 +2005,6 @@
     "nameEn": "Very Pale Silver"
   },
   {
-    "hex": "#FF00FF",
-    "nameId": "Fuchsia",
-    "nameEn": "Fuchsia"
-  },
-  {
     "hex": "#FF33FF",
     "nameId": "Fuchsia Muda",
     "nameEn": "Light Fuchsia"
@@ -2148,11 +2018,6 @@
     "hex": "#990099",
     "nameId": "Ungu Fuchsia",
     "nameEn": "Purple Fuchsia"
-  },
-  {
-    "hex": "#E8F5E9",
-    "nameId": "Hijau Muda Sangat Pucat",
-    "nameEn": "Very Pale Light Green"
   },
   {
     "hex": "#F1F8E9",
@@ -2198,11 +2063,6 @@
     "hex": "#33691E",
     "nameId": "Hijau Limau Gelap",
     "nameEn": "Very Dark Lime"
-  },
-  {
-    "hex": "#1B5E20",
-    "nameId": "Hijau Limau Hitam",
-    "nameEn": "Black Lime Green"
   },
   {
     "hex": "#F9F9F9",
@@ -2435,11 +2295,6 @@
     "nameEn": "Neon Light Pink"
   },
   {
-    "hex": "#EA80FC",
-    "nameId": "Ungu Pink Terang",
-    "nameEn": "Bright Purple Pink"
-  },
-  {
     "hex": "#7C4DFF",
     "nameId": "Ungu Dalam Terang",
     "nameEn": "Bright Deep Purple"
@@ -2453,11 +2308,6 @@
     "hex": "#6200FF",
     "nameId": "Violet Elektrik",
     "nameEn": "Electric Violet"
-  },
-  {
-    "hex": "#00E5FF",
-    "nameId": "Cyan Elektrik",
-    "nameEn": "Electric Cyan"
   },
   {
     "hex": "#76FF03",
@@ -2493,15 +2343,5 @@
     "hex": "#FFD180",
     "nameId": "Oranye Neon Muda",
     "nameEn": "Pale Neon Orange"
-  },
-  {
-    "hex": "#FFAB40",
-    "nameId": "Oranye Neon",
-    "nameEn": "Neon Orange"
-  },
-  {
-    "hex": "#FF6D00",
-    "nameId": "Oranye Neon Terang",
-    "nameEn": "Bright Neon Orange"
   }
 ]

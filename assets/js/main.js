@@ -1,11 +1,13 @@
 /**
  * main.js
- * ChromaSense - Fase 2 Integration
+ * ChromaSense v1.0 — Fase 4 (Final)
  * Entry point aplikasi. Mengorkestrasi semua modul:
  * camera.js, colorEngine.js, colorDB.js, state.js, ui.js, utils.js
  *
  * Fase 1: Webcam access, pixel sampling, nilai RGB mentah ✅
- * Fase 2: Color naming (nameId, nameEn), HEX, HSL, Color Panel UI ← sekarang
+ * Fase 2: Color naming (nameId, nameEn), HEX, HSL, Color Panel UI ✅
+ * Fase 3: Freeze mode, Copy HEX, History strip, responsive polish ✅
+ * Fase 4: Bug fixes, JSDoc, cross-browser hardening ✅
  */
 
 // ─────────────────────────────────────────────
@@ -14,10 +16,10 @@
 
 /**
  * Fungsi init utama — dipanggil saat DOM siap.
- * Urutan: load DB → start camera → bind events
+ * Urutan: load DB → bind events → tunggu user klik tombol kamera
  */
 async function init() {
-  console.log('[ChromaSense] Inisialisasi Fase 2...');
+  console.log('[ChromaSense] Inisialisasi...');
 
   // 1. Load color database terlebih dahulu
   try {
@@ -38,16 +40,15 @@ async function init() {
     return;
   }
 
-  // 3. Setup btn-start-camera (placeholder button dari Fase 1)
+  // 3. Setup btn-start-camera
   const btnStart = document.getElementById('btn-start-camera');
   if (btnStart) {
     btnStart.addEventListener('click', () => startCameraFlow(videoEl, crosshairCanvas));
   } else {
-    // Jika tidak ada placeholder, langsung start
     await startCameraFlow(videoEl, crosshairCanvas);
   }
 
-  // 4. Bind event lainnya
+  // 4. Bind semua event listener
   bindEvents(videoEl, crosshairCanvas);
 
   // 5. Sembunyikan color panel sampai ada warna pertama
@@ -62,12 +63,24 @@ async function init() {
 }
 
 /**
- * Flow start kamera — dipisah agar bisa dipanggil dari tombol.
+ * Flow start kamera — dipisah agar bisa dipanggil dari tombol maupun retry.
+ * Menyimpan deviceId kamera pertama ke AppState.activeCameraId.
+ *
+ * @param {HTMLVideoElement} videoEl
+ * @param {HTMLCanvasElement} crosshairCanvas
  */
 async function startCameraFlow(videoEl, crosshairCanvas) {
   try {
     const stream = await Camera.start(videoEl);
     AppState.activeStream = stream;
+
+    // FIX: Simpan deviceId kamera aktif sejak awal (bukan hanya saat switch)
+    const tracks = stream.getVideoTracks();
+    if (tracks.length > 0) {
+      const settings = tracks[0].getSettings();
+      AppState.activeCameraId = settings.deviceId || null;
+    }
+
     UI.hideCameraError();
 
     // Sembunyikan placeholder, tampilkan video
@@ -80,13 +93,15 @@ async function startCameraFlow(videoEl, crosshairCanvas) {
     if (btnFreeze) btnFreeze.disabled = false;
     if (btnSwitch) btnSwitch.disabled = false;
 
+    // { once: true } — listener otomatis dihapus setelah dipanggil sekali
     videoEl.addEventListener('loadedmetadata', () => {
       UI.resizeCrosshairCanvas(crosshairCanvas, videoEl);
-    });
+    }, { once: true });
 
     console.log('[ChromaSense] Kamera aktif');
   } catch (err) {
     console.error('[ChromaSense] Gagal start kamera:', err);
+    UI.showCameraError(err.friendlyMessage || 'Gagal mengakses kamera.');
   }
 }
 
@@ -94,6 +109,13 @@ async function startCameraFlow(videoEl, crosshairCanvas) {
 // EVENT BINDING
 // ─────────────────────────────────────────────
 
+/**
+ * Bind semua event listener ke elemen DOM.
+ * Dipanggil sekali saat init.
+ *
+ * @param {HTMLVideoElement} videoEl
+ * @param {HTMLCanvasElement} crosshairCanvas
+ */
 function bindEvents(videoEl, crosshairCanvas) {
   // Klik pada video → sample warna
   videoEl.addEventListener('click', (e) => handleVideoClick(e, videoEl, crosshairCanvas));
@@ -102,10 +124,10 @@ function bindEvents(videoEl, crosshairCanvas) {
   videoEl.addEventListener('touchend', (e) => {
     e.preventDefault();
     const touch = e.changedTouches[0];
-    handleVideoClick(touch, videoEl, crosshairCanvas);
+    if (touch) handleVideoClick(touch, videoEl, crosshairCanvas);
   }, { passive: false });
 
-  // Tombol Retry (dari error overlay Fase 1)
+  // Tombol Retry
   const btnRetry = document.getElementById('btn-retry');
   if (btnRetry) {
     btnRetry.addEventListener('click', () => {
@@ -117,13 +139,13 @@ function bindEvents(videoEl, crosshairCanvas) {
   // Tombol Freeze
   const btnFreeze = document.getElementById('btn-freeze');
   if (btnFreeze) {
-    btnFreeze.addEventListener('click', handleFreezeToggle);
+    btnFreeze.addEventListener('click', () => handleFreezeToggle(videoEl));
   }
 
   // Tombol Switch Camera
   const btnSwitch = document.getElementById('btn-switch-camera');
   if (btnSwitch) {
-    btnSwitch.addEventListener('click', handleSwitchCamera);
+    btnSwitch.addEventListener('click', () => handleSwitchCamera(videoEl));
   }
 
   // Tombol Copy HEX
@@ -132,10 +154,10 @@ function bindEvents(videoEl, crosshairCanvas) {
     btnCopy.addEventListener('click', handleCopyHex);
   }
 
-  // Resize handler untuk crosshair canvas
-  window.addEventListener('resize', () => {
+  // FIX: Debounce resize handler — mencegah spam rekalkulasi saat resize window
+  window.addEventListener('resize', Utils.debounce(() => {
     UI.resizeCrosshairCanvas(crosshairCanvas, videoEl);
-  });
+  }, 150));
 
   // Stop stream saat halaman ditutup
   window.addEventListener('beforeunload', () => {
@@ -151,28 +173,32 @@ function bindEvents(videoEl, crosshairCanvas) {
 
 /**
  * Handler utama saat pengguna klik/tap area video.
- * Mengambil pixel → konversi → update UI.
+ * Guard: tidak proses jika video belum ready (videoWidth === 0).
+ *
+ * @param {MouseEvent|Touch} event
+ * @param {HTMLVideoElement} videoEl
+ * @param {HTMLCanvasElement} crosshairCanvas
  */
 function handleVideoClick(event, videoEl, crosshairCanvas) {
-  // Jika freeze aktif, tetap bisa sample dari frame yang dibekukan
+  // FIX: Guard — video belum memiliki dimensi (stream belum aktif atau metadata belum ready)
+  if (!videoEl.videoWidth || !videoEl.videoHeight) {
+    console.warn('[ChromaSense] Video belum siap, sampling dibatalkan.');
+    return;
+  }
+
   const { r, g, b } = samplePixelFromVideo(event, videoEl);
 
-  // Gambar crosshair di posisi klik
+  // Gambar crosshair di posisi klik (koordinat relatif ke elemen video)
   const rect = videoEl.getBoundingClientRect();
-  const clickX = (event.clientX || event.pageX) - rect.left;
-  const clickY = (event.clientY || event.pageY) - rect.top;
+  const clickX = (event.clientX !== undefined ? event.clientX : event.pageX) - rect.left;
+  const clickY = (event.clientY !== undefined ? event.clientY : event.pageY) - rect.top;
   UI.drawCrosshair(crosshairCanvas, clickX, clickY);
 
-  // Bangun ColorObject menggunakan Color Engine + Database
-  const colorObj = ColorEngine.buildColorObject(
-    r, g, b,
-    ColorDB.getAll()
-  );
+  // Bangun ColorObject lengkap
+  const colorObj = ColorEngine.buildColorObject(r, g, b, ColorDB.getAll());
 
-  // Update state
+  // Update state dan UI
   AppState.setColor(colorObj);
-
-  // Update UI
   UI.updateColorPanel(colorObj);
   UI.updateHistoryStrip(AppState.history, (histColorObj) => {
     UI.updateColorPanel(histColorObj);
@@ -187,24 +213,25 @@ function handleVideoClick(event, videoEl, crosshairCanvas) {
 
 /**
  * Ambil nilai pixel RGBA dari video element pada koordinat event.
- * Menggunakan canvas offscreen — tidak di-append ke DOM.
+ * Menggunakan canvas offscreen — tidak di-append ke DOM untuk menghindari layout reflow.
+ * Koordinat di-scale dari ukuran tampilan ke resolusi asli video.
  *
- * @param {MouseEvent|Touch} event
- * @param {HTMLVideoElement} videoEl
- * @returns {{ r: number, g: number, b: number, a: number }}
+ * @param {MouseEvent|Touch} event - Event klik atau sentuh
+ * @param {HTMLVideoElement} videoEl - Elemen video aktif
+ * @returns {{ r: number, g: number, b: number, a: number }} Nilai RGBA (0–255)
  */
 function samplePixelFromVideo(event, videoEl) {
   const rect = videoEl.getBoundingClientRect();
-  const clientX = event.clientX || event.pageX;
-  const clientY = event.clientY || event.pageY;
+  const clientX = event.clientX !== undefined ? event.clientX : event.pageX;
+  const clientY = event.clientY !== undefined ? event.clientY : event.pageY;
 
-  // Scale koordinat klik ke dimensi aktual video
+  // Scale koordinat tampilan → koordinat resolusi asli video
   const scaleX = videoEl.videoWidth / rect.width;
   const scaleY = videoEl.videoHeight / rect.height;
   const videoX = Math.round((clientX - rect.left) * scaleX);
   const videoY = Math.round((clientY - rect.top) * scaleY);
 
-  // Canvas offscreen untuk sampling
+  // Canvas offscreen — tidak ditambahkan ke DOM
   const canvas = document.createElement('canvas');
   canvas.width = videoEl.videoWidth;
   canvas.height = videoEl.videoHeight;
@@ -224,8 +251,14 @@ function samplePixelFromVideo(event, videoEl) {
 // HANDLER: FREEZE
 // ─────────────────────────────────────────────
 
-function handleFreezeToggle() {
-  const videoEl = document.getElementById('video-feed');
+/**
+ * Toggle freeze/resume pada video stream.
+ * FIX: video.play() mengembalikan Promise — di-handle untuk mencegah
+ * unhandled rejection di Safari dan Firefox.
+ *
+ * @param {HTMLVideoElement} videoEl
+ */
+function handleFreezeToggle(videoEl) {
   if (!videoEl) return;
 
   const isFrozen = AppState.toggleFreeze();
@@ -233,7 +266,16 @@ function handleFreezeToggle() {
   if (isFrozen) {
     videoEl.pause();
   } else {
-    videoEl.play();
+    // play() return Promise di semua browser modern — tangani rejection-nya
+    const playPromise = videoEl.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((err) => {
+        console.warn('[ChromaSense] video.play() gagal:', err.message);
+        // Rollback state freeze jika play gagal
+        AppState.isFrozen = true;
+        UI.updateFreezeButton(true);
+      });
+    }
   }
 
   UI.updateFreezeButton(isFrozen);
@@ -244,8 +286,14 @@ function handleFreezeToggle() {
 // HANDLER: SWITCH CAMERA
 // ─────────────────────────────────────────────
 
-async function handleSwitchCamera() {
-  const videoEl = document.getElementById('video-feed');
+/**
+ * Ganti ke kamera lain yang tersedia.
+ * Menghentikan stream lama sebelum memulai stream baru.
+ * Reset freeze state setelah ganti kamera.
+ *
+ * @param {HTMLVideoElement} videoEl
+ */
+async function handleSwitchCamera(videoEl) {
   if (!videoEl) return;
 
   try {
@@ -255,19 +303,25 @@ async function handleSwitchCamera() {
       return;
     }
 
-    // Toggle antara kamera yang tersedia
+    // Cari kamera berikutnya
     const currentId = AppState.activeCameraId;
     const next = cameras.find(c => c.deviceId !== currentId) || cameras[0];
 
-    // Stop stream lama
+    // Stop stream lama terlebih dahulu
     if (AppState.activeStream) {
       Camera.stop(AppState.activeStream);
+      AppState.activeStream = null;
     }
 
-    // Start stream baru dengan kamera yang dipilih
     const stream = await Camera.startWithDeviceId(videoEl, next.deviceId);
     AppState.activeStream = stream;
     AppState.activeCameraId = next.deviceId;
+
+    // FIX: Reset freeze state saat ganti kamera — video baru selalu berjalan
+    if (AppState.isFrozen) {
+      AppState.isFrozen = false;
+      UI.updateFreezeButton(false);
+    }
 
     UI.showToast('Kamera diganti');
   } catch (err) {
@@ -280,21 +334,22 @@ async function handleSwitchCamera() {
 // HANDLER: COPY HEX
 // ─────────────────────────────────────────────
 
+/**
+ * Salin kode HEX warna aktif ke clipboard.
+ * Toast notifikasi ditampilkan oleh Utils.copyToClipboard.
+ */
 async function handleCopyHex() {
   if (!AppState.currentColor) {
     UI.showToast('Pilih warna terlebih dahulu');
     return;
   }
-
   await Utils.copyToClipboard(AppState.currentColor.hex);
-  // Toast ditampilkan dari dalam copyToClipboard via UI.showToast
 }
 
 // ─────────────────────────────────────────────
 // ENTRY POINT
 // ─────────────────────────────────────────────
 
-// Jalankan init setelah DOM selesai dimuat
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {
