@@ -1,0 +1,2347 @@
+[
+  {
+    "hex": "#000000",
+    "nameId": "Hitam",
+    "nameEn": "Black"
+  },
+  {
+    "hex": "#0A0A0A",
+    "nameId": "Hitam Pekat",
+    "nameEn": "Jet Black"
+  },
+  {
+    "hex": "#111111",
+    "nameId": "Hitam Arang",
+    "nameEn": "Charcoal Black"
+  },
+  {
+    "hex": "#1A1A1A",
+    "nameId": "Hitam Kelam",
+    "nameEn": "Dark Black"
+  },
+  {
+    "hex": "#222222",
+    "nameId": "Hitam Legam",
+    "nameEn": "Night Black"
+  },
+  {
+    "hex": "#2C2C2C",
+    "nameId": "Abu Hitam",
+    "nameEn": "Dark Charcoal"
+  },
+  {
+    "hex": "#333333",
+    "nameId": "Abu Gelap",
+    "nameEn": "Dark Gray"
+  },
+  {
+    "hex": "#3D3D3D",
+    "nameId": "Abu Tua",
+    "nameEn": "Dim Gray"
+  },
+  {
+    "hex": "#444444",
+    "nameId": "Abu Asap",
+    "nameEn": "Smoke Gray"
+  },
+  {
+    "hex": "#555555",
+    "nameId": "Abu Sedang",
+    "nameEn": "Medium Gray"
+  },
+  {
+    "hex": "#666666",
+    "nameId": "Abu",
+    "nameEn": "Gray"
+  },
+  {
+    "hex": "#777777",
+    "nameId": "Abu Biasa",
+    "nameEn": "Suva Gray"
+  },
+  {
+    "hex": "#888888",
+    "nameId": "Abu Tengah",
+    "nameEn": "Spanish Gray"
+  },
+  {
+    "hex": "#999999",
+    "nameId": "Abu Terang",
+    "nameEn": "Dark Silver"
+  },
+  {
+    "hex": "#AAAAAA",
+    "nameId": "Abu Muda",
+    "nameEn": "Silver"
+  },
+  {
+    "hex": "#BBBBBB",
+    "nameId": "Abu Cerah",
+    "nameEn": "Light Gray"
+  },
+  {
+    "hex": "#CCCCCC",
+    "nameId": "Abu Pucat",
+    "nameEn": "Pale Gray"
+  },
+  {
+    "hex": "#DDDDDD",
+    "nameId": "Abu Pudar",
+    "nameEn": "Gainsboro"
+  },
+  {
+    "hex": "#EEEEEE",
+    "nameId": "Abu Putih",
+    "nameEn": "Whisper"
+  },
+  {
+    "hex": "#F5F5F5",
+    "nameId": "Putih Abu",
+    "nameEn": "White Smoke"
+  },
+  {
+    "hex": "#FFFFFF",
+    "nameId": "Putih",
+    "nameEn": "White"
+  },
+  {
+    "hex": "#FFFAFA",
+    "nameId": "Putih Salju",
+    "nameEn": "Snow"
+  },
+  {
+    "hex": "#F0F8FF",
+    "nameId": "Putih Kebiruan",
+    "nameEn": "Alice Blue"
+  },
+  {
+    "hex": "#FFFFF0",
+    "nameId": "Putih Gading",
+    "nameEn": "Ivory"
+  },
+  {
+    "hex": "#FAFAFA",
+    "nameId": "Putih Bersih",
+    "nameEn": "Off White"
+  },
+  {
+    "hex": "#FF0000",
+    "nameId": "Merah",
+    "nameEn": "Red"
+  },
+  {
+    "hex": "#CC0000",
+    "nameId": "Merah Tua",
+    "nameEn": "Dark Red"
+  },
+  {
+    "hex": "#990000",
+    "nameId": "Merah Gelap",
+    "nameEn": "Deep Red"
+  },
+  {
+    "hex": "#660000",
+    "nameId": "Merah Hitam",
+    "nameEn": "Maroon Dark"
+  },
+  {
+    "hex": "#800000",
+    "nameId": "Merah Bata Tua",
+    "nameEn": "Maroon"
+  },
+  {
+    "hex": "#B22222",
+    "nameId": "Merah Bata",
+    "nameEn": "Brick Red"
+  },
+  {
+    "hex": "#CD5C5C",
+    "nameId": "Merah India",
+    "nameEn": "Indian Red"
+  },
+  {
+    "hex": "#DC143C",
+    "nameId": "Merah Kirmizi",
+    "nameEn": "Crimson"
+  },
+  {
+    "hex": "#FF3333",
+    "nameId": "Merah Cerah",
+    "nameEn": "Bright Red"
+  },
+  {
+    "hex": "#FF4444",
+    "nameId": "Merah Muda Terang",
+    "nameEn": "Light Red"
+  },
+  {
+    "hex": "#FF6666",
+    "nameId": "Merah Pudar",
+    "nameEn": "Salmon Red"
+  },
+  {
+    "hex": "#FF8888",
+    "nameId": "Merah Muda",
+    "nameEn": "Baby Red"
+  },
+  {
+    "hex": "#FFB3B3",
+    "nameId": "Merah Pastel",
+    "nameEn": "Pastel Red"
+  },
+  {
+    "hex": "#FF5733",
+    "nameId": "Merah Tomat",
+    "nameEn": "Tomato Red"
+  },
+  {
+    "hex": "#E74C3C",
+    "nameId": "Merah Alizarin",
+    "nameEn": "Alizarin"
+  },
+  {
+    "hex": "#C0392B",
+    "nameId": "Merah Pomegranate",
+    "nameEn": "Pomegranate"
+  },
+  {
+    "hex": "#FF2400",
+    "nameId": "Merah Scarlet",
+    "nameEn": "Scarlet"
+  },
+  {
+    "hex": "#A52A2A",
+    "nameId": "Merah Cokelat",
+    "nameEn": "Brown Red"
+  },
+  {
+    "hex": "#FF6347",
+    "nameId": "Merah Tomat Muda",
+    "nameEn": "Tomato"
+  },
+  {
+    "hex": "#FA8072",
+    "nameId": "Merah Salmon",
+    "nameEn": "Salmon"
+  },
+  {
+    "hex": "#E9967A",
+    "nameId": "Salmon Gelap",
+    "nameEn": "Dark Salmon"
+  },
+  {
+    "hex": "#FFA07A",
+    "nameId": "Salmon Muda",
+    "nameEn": "Light Salmon"
+  },
+  {
+    "hex": "#FF7F7F",
+    "nameId": "Merah Muda Lembut",
+    "nameEn": "Light Coral"
+  },
+  {
+    "hex": "#F08080",
+    "nameId": "Merah Karang",
+    "nameEn": "Coral Pink"
+  },
+  {
+    "hex": "#FFA500",
+    "nameId": "Oranye",
+    "nameEn": "Orange"
+  },
+  {
+    "hex": "#FF8C00",
+    "nameId": "Oranye Tua",
+    "nameEn": "Dark Orange"
+  },
+  {
+    "hex": "#FF7F00",
+    "nameId": "Oranye Pekat",
+    "nameEn": "Deep Orange"
+  },
+  {
+    "hex": "#FF6600",
+    "nameId": "Oranye Bakar",
+    "nameEn": "Burnt Orange"
+  },
+  {
+    "hex": "#FF4500",
+    "nameId": "Oranye Merah",
+    "nameEn": "Orange Red"
+  },
+  {
+    "hex": "#FF9900",
+    "nameId": "Oranye Kuning",
+    "nameEn": "Amber Orange"
+  },
+  {
+    "hex": "#FFB347",
+    "nameId": "Oranye Muda",
+    "nameEn": "Sandy Orange"
+  },
+  {
+    "hex": "#FFCC99",
+    "nameId": "Oranye Pastel",
+    "nameEn": "Peach Orange"
+  },
+  {
+    "hex": "#F4A460",
+    "nameId": "Sandy Brown",
+    "nameEn": "Sandy Brown"
+  },
+  {
+    "hex": "#E8A87C",
+    "nameId": "Oranye Pasir",
+    "nameEn": "Sand Orange"
+  },
+  {
+    "hex": "#FF7043",
+    "nameId": "Oranye Dalam",
+    "nameEn": "Deep Orange Muted"
+  },
+  {
+    "hex": "#FF8F00",
+    "nameId": "Oranye Amber",
+    "nameEn": "Amber"
+  },
+  {
+    "hex": "#F57C00",
+    "nameId": "Oranye Tua Amber",
+    "nameEn": "Dark Amber"
+  },
+  {
+    "hex": "#FFFF00",
+    "nameId": "Kuning",
+    "nameEn": "Yellow"
+  },
+  {
+    "hex": "#FFD700",
+    "nameId": "Kuning Emas",
+    "nameEn": "Gold"
+  },
+  {
+    "hex": "#FFC200",
+    "nameId": "Emas",
+    "nameEn": "Golden"
+  },
+  {
+    "hex": "#FFB300",
+    "nameId": "Kuning Amber",
+    "nameEn": "Amber Yellow"
+  },
+  {
+    "hex": "#F9A825",
+    "nameId": "Kuning Jagung",
+    "nameEn": "Corn Yellow"
+  },
+  {
+    "hex": "#FFEE58",
+    "nameId": "Kuning Cerah",
+    "nameEn": "Bright Yellow"
+  },
+  {
+    "hex": "#FFF176",
+    "nameId": "Kuning Muda",
+    "nameEn": "Light Yellow"
+  },
+  {
+    "hex": "#FFFDE7",
+    "nameId": "Kuning Pucat",
+    "nameEn": "Pale Yellow"
+  },
+  {
+    "hex": "#FFFF99",
+    "nameId": "Kuning Pastel",
+    "nameEn": "Pastel Yellow"
+  },
+  {
+    "hex": "#F0E68C",
+    "nameId": "Kuning Kaki",
+    "nameEn": "Khaki Yellow"
+  },
+  {
+    "hex": "#EEE8AA",
+    "nameId": "Kuning Gandum",
+    "nameEn": "Pale Goldenrod"
+  },
+  {
+    "hex": "#DAA520",
+    "nameId": "Goldenrod",
+    "nameEn": "Goldenrod"
+  },
+  {
+    "hex": "#B8860B",
+    "nameId": "Emas Tua",
+    "nameEn": "Dark Goldenrod"
+  },
+  {
+    "hex": "#9B870C",
+    "nameId": "Emas Gelap",
+    "nameEn": "Dark Gold"
+  },
+  {
+    "hex": "#FADA5E",
+    "nameId": "Kuning Kenari",
+    "nameEn": "Canary Yellow"
+  },
+  {
+    "hex": "#F5DEB3",
+    "nameId": "Kuning Gandum Tua",
+    "nameEn": "Wheat"
+  },
+  {
+    "hex": "#FFEFD5",
+    "nameId": "Krim Persik",
+    "nameEn": "Papaya Whip"
+  },
+  {
+    "hex": "#FFE4B5",
+    "nameId": "Kuning Krim",
+    "nameEn": "Moccasin"
+  },
+  {
+    "hex": "#FFFACD",
+    "nameId": "Kuning Lemon",
+    "nameEn": "Lemon Chiffon"
+  },
+  {
+    "hex": "#00FF00",
+    "nameId": "Hijau",
+    "nameEn": "Green"
+  },
+  {
+    "hex": "#008000",
+    "nameId": "Hijau Tua",
+    "nameEn": "Dark Green"
+  },
+  {
+    "hex": "#006400",
+    "nameId": "Hijau Gelap",
+    "nameEn": "Deep Green"
+  },
+  {
+    "hex": "#004000",
+    "nameId": "Hijau Hitam",
+    "nameEn": "Very Dark Green"
+  },
+  {
+    "hex": "#228B22",
+    "nameId": "Hijau Hutan",
+    "nameEn": "Forest Green"
+  },
+  {
+    "hex": "#2E8B57",
+    "nameId": "Hijau Laut",
+    "nameEn": "Sea Green"
+  },
+  {
+    "hex": "#3CB371",
+    "nameId": "Hijau Sedang",
+    "nameEn": "Medium Sea Green"
+  },
+  {
+    "hex": "#66CDAA",
+    "nameId": "Hijau Akuamarin",
+    "nameEn": "Medium Aquamarine"
+  },
+  {
+    "hex": "#90EE90",
+    "nameId": "Hijau Muda",
+    "nameEn": "Light Green"
+  },
+  {
+    "hex": "#98FB98",
+    "nameId": "Hijau Pucat",
+    "nameEn": "Pale Green"
+  },
+  {
+    "hex": "#00FA9A",
+    "nameId": "Hijau Musim Semi",
+    "nameEn": "Medium Spring Green"
+  },
+  {
+    "hex": "#00FF7F",
+    "nameId": "Hijau Musim Semi",
+    "nameEn": "Spring Green"
+  },
+  {
+    "hex": "#7CFC00",
+    "nameId": "Hijau Rumput",
+    "nameEn": "Lawn Green"
+  },
+  {
+    "hex": "#7FFF00",
+    "nameId": "Hijau Chartreuse",
+    "nameEn": "Chartreuse"
+  },
+  {
+    "hex": "#ADFF2F",
+    "nameId": "Hijau Kuning",
+    "nameEn": "Green Yellow"
+  },
+  {
+    "hex": "#9ACD32",
+    "nameId": "Hijau Zaitun Muda",
+    "nameEn": "Yellow Green"
+  },
+  {
+    "hex": "#6B8E23",
+    "nameId": "Hijau Zaitun",
+    "nameEn": "Olive Drab"
+  },
+  {
+    "hex": "#808000",
+    "nameId": "Zaitun",
+    "nameEn": "Olive"
+  },
+  {
+    "hex": "#556B2F",
+    "nameId": "Hijau Militer",
+    "nameEn": "Army Green"
+  },
+  {
+    "hex": "#4A7C59",
+    "nameId": "Hijau Lumut",
+    "nameEn": "Moss Green"
+  },
+  {
+    "hex": "#32CD32",
+    "nameId": "Hijau Lime",
+    "nameEn": "Lime Green"
+  },
+  {
+    "hex": "#00C957",
+    "nameId": "Hijau Zamrud",
+    "nameEn": "Emerald Green"
+  },
+  {
+    "hex": "#50C878",
+    "nameId": "Hijau Emerald",
+    "nameEn": "Emerald"
+  },
+  {
+    "hex": "#4CAF50",
+    "nameId": "Hijau Material",
+    "nameEn": "Material Green"
+  },
+  {
+    "hex": "#388E3C",
+    "nameId": "Hijau Daun",
+    "nameEn": "Leaf Green"
+  },
+  {
+    "hex": "#1B5E20",
+    "nameId": "Hijau Pekat",
+    "nameEn": "Very Dark Green"
+  },
+  {
+    "hex": "#A8D5A2",
+    "nameId": "Hijau Sage",
+    "nameEn": "Sage Green"
+  },
+  {
+    "hex": "#B2D8B2",
+    "nameId": "Hijau Muda Pastel",
+    "nameEn": "Pastel Green"
+  },
+  {
+    "hex": "#D4EDDA",
+    "nameId": "Hijau Mint Pucat",
+    "nameEn": "Pale Mint"
+  },
+  {
+    "hex": "#00FFFF",
+    "nameId": "Tosca",
+    "nameEn": "Cyan"
+  },
+  {
+    "hex": "#00CED1",
+    "nameId": "Tosca Tua",
+    "nameEn": "Dark Turquoise"
+  },
+  {
+    "hex": "#008B8B",
+    "nameId": "Tosca Gelap",
+    "nameEn": "Dark Cyan"
+  },
+  {
+    "hex": "#006B6B",
+    "nameId": "Tosca Pekat",
+    "nameEn": "Deep Teal"
+  },
+  {
+    "hex": "#20B2AA",
+    "nameId": "Hijau Tosca",
+    "nameEn": "Light Sea Green"
+  },
+  {
+    "hex": "#5F9EA0",
+    "nameId": "Biru Cadet",
+    "nameEn": "Cadet Blue"
+  },
+  {
+    "hex": "#40E0D0",
+    "nameId": "Turquoise",
+    "nameEn": "Turquoise"
+  },
+  {
+    "hex": "#48D1CC",
+    "nameId": "Turquoise Sedang",
+    "nameEn": "Medium Turquoise"
+  },
+  {
+    "hex": "#7FFFD4",
+    "nameId": "Hijau Air",
+    "nameEn": "Aquamarine"
+  },
+  {
+    "hex": "#E0FFFF",
+    "nameId": "Tosca Pucat",
+    "nameEn": "Light Cyan"
+  },
+  {
+    "hex": "#AFEEEE",
+    "nameId": "Turquoise Pucat",
+    "nameEn": "Pale Turquoise"
+  },
+  {
+    "hex": "#B0E0E6",
+    "nameId": "Biru Serbuk",
+    "nameEn": "Powder Blue"
+  },
+  {
+    "hex": "#008080",
+    "nameId": "Teal",
+    "nameEn": "Teal"
+  },
+  {
+    "hex": "#00796B",
+    "nameId": "Teal Tua",
+    "nameEn": "Dark Teal"
+  },
+  {
+    "hex": "#004D40",
+    "nameId": "Teal Pekat",
+    "nameEn": "Deep Teal Dark"
+  },
+  {
+    "hex": "#26C6DA",
+    "nameId": "Biru Tosca Cerah",
+    "nameEn": "Cyan Blue"
+  },
+  {
+    "hex": "#80DEEA",
+    "nameId": "Tosca Pastel",
+    "nameEn": "Pastel Cyan"
+  },
+  {
+    "hex": "#0000FF",
+    "nameId": "Biru",
+    "nameEn": "Blue"
+  },
+  {
+    "hex": "#00008B",
+    "nameId": "Biru Tua",
+    "nameEn": "Dark Blue"
+  },
+  {
+    "hex": "#000080",
+    "nameId": "Biru Dongker",
+    "nameEn": "Navy Blue"
+  },
+  {
+    "hex": "#00005A",
+    "nameId": "Biru Dongker Pekat",
+    "nameEn": "Deep Navy"
+  },
+  {
+    "hex": "#191970",
+    "nameId": "Biru Midnite",
+    "nameEn": "Midnight Blue"
+  },
+  {
+    "hex": "#0000CD",
+    "nameId": "Biru Sedang",
+    "nameEn": "Medium Blue"
+  },
+  {
+    "hex": "#1E90FF",
+    "nameId": "Biru Dodger",
+    "nameEn": "Dodger Blue"
+  },
+  {
+    "hex": "#4169E1",
+    "nameId": "Biru Royal",
+    "nameEn": "Royal Blue"
+  },
+  {
+    "hex": "#6495ED",
+    "nameId": "Biru Kornflower",
+    "nameEn": "Cornflower Blue"
+  },
+  {
+    "hex": "#87CEEB",
+    "nameId": "Biru Langit",
+    "nameEn": "Sky Blue"
+  },
+  {
+    "hex": "#87CEFA",
+    "nameId": "Biru Langit Muda",
+    "nameEn": "Light Sky Blue"
+  },
+  {
+    "hex": "#ADD8E6",
+    "nameId": "Biru Muda",
+    "nameEn": "Light Blue"
+  },
+  {
+    "hex": "#B0C4DE",
+    "nameId": "Biru Baja Muda",
+    "nameEn": "Light Steel Blue"
+  },
+  {
+    "hex": "#C9E8F7",
+    "nameId": "Biru Pucat",
+    "nameEn": "Pale Blue"
+  },
+  {
+    "hex": "#DDEEFF",
+    "nameId": "Biru Pastel",
+    "nameEn": "Pastel Blue"
+  },
+  {
+    "hex": "#4682B4",
+    "nameId": "Biru Baja",
+    "nameEn": "Steel Blue"
+  },
+  {
+    "hex": "#2196F3",
+    "nameId": "Biru Material",
+    "nameEn": "Material Blue"
+  },
+  {
+    "hex": "#1976D2",
+    "nameId": "Biru Material Tua",
+    "nameEn": "Material Dark Blue"
+  },
+  {
+    "hex": "#0D47A1",
+    "nameId": "Biru Gelap Material",
+    "nameEn": "Material Very Dark Blue"
+  },
+  {
+    "hex": "#1565C0",
+    "nameId": "Biru Kobalt",
+    "nameEn": "Cobalt Blue"
+  },
+  {
+    "hex": "#003366",
+    "nameId": "Biru Safir",
+    "nameEn": "Sapphire Blue"
+  },
+  {
+    "hex": "#3F51B5",
+    "nameId": "Biru Indigo Material",
+    "nameEn": "Indigo Material"
+  },
+  {
+    "hex": "#039BE5",
+    "nameId": "Biru Langit Cerah",
+    "nameEn": "Cerulean Blue"
+  },
+  {
+    "hex": "#29B6F6",
+    "nameId": "Biru Langit Muda Cerah",
+    "nameEn": "Light Cerulean"
+  },
+  {
+    "hex": "#81D4FA",
+    "nameId": "Biru Langit Pastel",
+    "nameEn": "Pale Cerulean"
+  },
+  {
+    "hex": "#E3F2FD",
+    "nameId": "Biru Sangat Pucat",
+    "nameEn": "Very Pale Blue"
+  },
+  {
+    "hex": "#8A2BE2",
+    "nameId": "Ungu Biru",
+    "nameEn": "Blue Violet"
+  },
+  {
+    "hex": "#4B0082",
+    "nameId": "Indigo",
+    "nameEn": "Indigo"
+  },
+  {
+    "hex": "#6600CC",
+    "nameId": "Ungu Tua",
+    "nameEn": "Dark Purple"
+  },
+  {
+    "hex": "#800080",
+    "nameId": "Ungu",
+    "nameEn": "Purple"
+  },
+  {
+    "hex": "#9400D3",
+    "nameId": "Ungu Violet Tua",
+    "nameEn": "Dark Violet"
+  },
+  {
+    "hex": "#9932CC",
+    "nameId": "Ungu Gelap Anggrek",
+    "nameEn": "Dark Orchid"
+  },
+  {
+    "hex": "#BA55D3",
+    "nameId": "Anggrek Sedang",
+    "nameEn": "Medium Orchid"
+  },
+  {
+    "hex": "#CC44CC",
+    "nameId": "Ungu Sedang",
+    "nameEn": "Medium Purple Light"
+  },
+  {
+    "hex": "#DA70D6",
+    "nameId": "Ungu Anggrek",
+    "nameEn": "Orchid"
+  },
+  {
+    "hex": "#EE82EE",
+    "nameId": "Violet",
+    "nameEn": "Violet"
+  },
+  {
+    "hex": "#FF00FF",
+    "nameId": "Magenta",
+    "nameEn": "Magenta"
+  },
+  {
+    "hex": "#FF77FF",
+    "nameId": "Magenta Muda",
+    "nameEn": "Light Magenta"
+  },
+  {
+    "hex": "#FFB3FF",
+    "nameId": "Ungu Pastel",
+    "nameEn": "Pastel Purple"
+  },
+  {
+    "hex": "#E6E6FA",
+    "nameId": "Lavender",
+    "nameEn": "Lavender"
+  },
+  {
+    "hex": "#D8BFD8",
+    "nameId": "Thistle",
+    "nameEn": "Thistle"
+  },
+  {
+    "hex": "#DDA0DD",
+    "nameId": "Plum",
+    "nameEn": "Plum"
+  },
+  {
+    "hex": "#7B68EE",
+    "nameId": "Biru Ungu Sedang",
+    "nameEn": "Medium Slate Blue"
+  },
+  {
+    "hex": "#6A5ACD",
+    "nameId": "Batu Tulis Biru",
+    "nameEn": "Slate Blue"
+  },
+  {
+    "hex": "#483D8B",
+    "nameId": "Batu Tulis Tua",
+    "nameEn": "Dark Slate Blue"
+  },
+  {
+    "hex": "#9C27B0",
+    "nameId": "Ungu Material",
+    "nameEn": "Material Purple"
+  },
+  {
+    "hex": "#7B1FA2",
+    "nameId": "Ungu Material Tua",
+    "nameEn": "Material Dark Purple"
+  },
+  {
+    "hex": "#4A148C",
+    "nameId": "Ungu Pekat Material",
+    "nameEn": "Material Deep Purple"
+  },
+  {
+    "hex": "#CE93D8",
+    "nameId": "Ungu Muda Material",
+    "nameEn": "Material Light Purple"
+  },
+  {
+    "hex": "#F3E5F5",
+    "nameId": "Ungu Sangat Pucat",
+    "nameEn": "Very Pale Purple"
+  },
+  {
+    "hex": "#FF1493",
+    "nameId": "Merah Muda Neon",
+    "nameEn": "Deep Pink"
+  },
+  {
+    "hex": "#FF69B4",
+    "nameId": "Merah Muda Flamingo",
+    "nameEn": "Hot Pink"
+  },
+  {
+    "hex": "#FFB6C1",
+    "nameId": "Merah Muda",
+    "nameEn": "Light Pink"
+  },
+  {
+    "hex": "#FFC0CB",
+    "nameId": "Pink",
+    "nameEn": "Pink"
+  },
+  {
+    "hex": "#FFD1DC",
+    "nameId": "Pink Pastel",
+    "nameEn": "Pastel Pink"
+  },
+  {
+    "hex": "#FF91A4",
+    "nameId": "Pink Salmon",
+    "nameEn": "Salmon Pink"
+  },
+  {
+    "hex": "#DB7093",
+    "nameId": "Merah Muda Violet",
+    "nameEn": "Pale Violet Red"
+  },
+  {
+    "hex": "#C71585",
+    "nameId": "Merah Ungu Tua",
+    "nameEn": "Medium Violet Red"
+  },
+  {
+    "hex": "#E91E63",
+    "nameId": "Pink Material",
+    "nameEn": "Material Pink"
+  },
+  {
+    "hex": "#C2185B",
+    "nameId": "Pink Material Tua",
+    "nameEn": "Material Dark Pink"
+  },
+  {
+    "hex": "#880E4F",
+    "nameId": "Pink Pekat Material",
+    "nameEn": "Material Deep Pink"
+  },
+  {
+    "hex": "#F48FB1",
+    "nameId": "Pink Muda Material",
+    "nameEn": "Material Light Pink"
+  },
+  {
+    "hex": "#FCE4EC",
+    "nameId": "Pink Sangat Pucat",
+    "nameEn": "Very Pale Pink"
+  },
+  {
+    "hex": "#FF4081",
+    "nameId": "Pink Aksen",
+    "nameEn": "Pink Accent"
+  },
+  {
+    "hex": "#F50057",
+    "nameId": "Merah Pink Terang",
+    "nameEn": "Deep Pink Accent"
+  },
+  {
+    "hex": "#6B3A2A",
+    "nameId": "Cokelat Tua",
+    "nameEn": "Dark Brown"
+  },
+  {
+    "hex": "#3E1C00",
+    "nameId": "Cokelat Pekat",
+    "nameEn": "Very Dark Brown"
+  },
+  {
+    "hex": "#5D4037",
+    "nameId": "Cokelat Material",
+    "nameEn": "Material Brown"
+  },
+  {
+    "hex": "#4E342E",
+    "nameId": "Cokelat Tua Material",
+    "nameEn": "Material Dark Brown"
+  },
+  {
+    "hex": "#3E2723",
+    "nameId": "Cokelat Gelap Material",
+    "nameEn": "Material Very Dark Brown"
+  },
+  {
+    "hex": "#795548",
+    "nameId": "Cokelat Sedang Material",
+    "nameEn": "Material Medium Brown"
+  },
+  {
+    "hex": "#8D6E63",
+    "nameId": "Cokelat Muda Material",
+    "nameEn": "Material Light Brown"
+  },
+  {
+    "hex": "#A1887F",
+    "nameId": "Cokelat Pucat",
+    "nameEn": "Pale Brown"
+  },
+  {
+    "hex": "#BCAAA4",
+    "nameId": "Cokelat Sangat Pucat",
+    "nameEn": "Very Pale Brown"
+  },
+  {
+    "hex": "#D7CCC8",
+    "nameId": "Cokelat Krim",
+    "nameEn": "Cream Brown"
+  },
+  {
+    "hex": "#EFEBE9",
+    "nameId": "Cokelat Putih",
+    "nameEn": "Off Brown White"
+  },
+  {
+    "hex": "#8B4513",
+    "nameId": "Cokelat Pelana",
+    "nameEn": "Saddle Brown"
+  },
+  {
+    "hex": "#A0522D",
+    "nameId": "Cokelat Sienna",
+    "nameEn": "Sienna"
+  },
+  {
+    "hex": "#CD853F",
+    "nameId": "Cokelat Peru",
+    "nameEn": "Peru"
+  },
+  {
+    "hex": "#D2691E",
+    "nameId": "Cokelat Cokelat",
+    "nameEn": "Chocolate"
+  },
+  {
+    "hex": "#DEB887",
+    "nameId": "Cokelat Kayu",
+    "nameEn": "Burlywood"
+  },
+  {
+    "hex": "#D2B48C",
+    "nameId": "Cokelat Tan",
+    "nameEn": "Tan"
+  },
+  {
+    "hex": "#BC8F5F",
+    "nameId": "Cokelat Kemerahan",
+    "nameEn": "Rosy Brown Light"
+  },
+  {
+    "hex": "#C3A882",
+    "nameId": "Cokelat Pasir",
+    "nameEn": "Sand Brown"
+  },
+  {
+    "hex": "#C19A6B",
+    "nameId": "Cokelat Kamel",
+    "nameEn": "Camel Brown"
+  },
+  {
+    "hex": "#E8D5B7",
+    "nameId": "Cokelat Krem",
+    "nameEn": "Cream"
+  },
+  {
+    "hex": "#7D4F35",
+    "nameId": "Cokelat Kopi",
+    "nameEn": "Coffee Brown"
+  },
+  {
+    "hex": "#6F4E37",
+    "nameId": "Cokelat Kopi Tua",
+    "nameEn": "Dark Coffee"
+  },
+  {
+    "hex": "#4B2F1A",
+    "nameId": "Cokelat Espresso",
+    "nameEn": "Espresso"
+  },
+  {
+    "hex": "#9B5523",
+    "nameId": "Cokelat Kayu Manis",
+    "nameEn": "Cinnamon"
+  },
+  {
+    "hex": "#C67C48",
+    "nameId": "Cokelat Kulit",
+    "nameEn": "Leather Brown"
+  },
+  {
+    "hex": "#FFDAB9",
+    "nameId": "Krem Persik",
+    "nameEn": "Peach"
+  },
+  {
+    "hex": "#FFE5CC",
+    "nameId": "Persik Muda",
+    "nameEn": "Light Peach"
+  },
+  {
+    "hex": "#FFCBA4",
+    "nameId": "Persik",
+    "nameEn": "Peach"
+  },
+  {
+    "hex": "#FFAD86",
+    "nameId": "Persik Tua",
+    "nameEn": "Dark Peach"
+  },
+  {
+    "hex": "#FF9966",
+    "nameId": "Persik Oranye",
+    "nameEn": "Atomic Tangerine"
+  },
+  {
+    "hex": "#FF7F50",
+    "nameId": "Karang",
+    "nameEn": "Coral"
+  },
+  {
+    "hex": "#FF6B6B",
+    "nameId": "Merah Karang Muda",
+    "nameEn": "Light Coral Red"
+  },
+  {
+    "hex": "#FAEBD7",
+    "nameId": "Krem Putih",
+    "nameEn": "Antique White"
+  },
+  {
+    "hex": "#FAF0E6",
+    "nameId": "Krem Linen",
+    "nameEn": "Linen"
+  },
+  {
+    "hex": "#FFF8DC",
+    "nameId": "Krem Jagung",
+    "nameEn": "Cornsilk"
+  },
+  {
+    "hex": "#FAFAD2",
+    "nameId": "Kuning Krem",
+    "nameEn": "Light Goldenrod Yellow"
+  },
+  {
+    "hex": "#FFF5E1",
+    "nameId": "Krem Hangat",
+    "nameEn": "Warm Cream"
+  },
+  {
+    "hex": "#F5F5DC",
+    "nameId": "Krem Beis",
+    "nameEn": "Beige"
+  },
+  {
+    "hex": "#E8DCCC",
+    "nameId": "Krem Beis Tua",
+    "nameEn": "Dark Beige"
+  },
+  {
+    "hex": "#D4C5A9",
+    "nameId": "Krem Pasir",
+    "nameEn": "Sand Beige"
+  },
+  {
+    "hex": "#C2B280",
+    "nameId": "Krem Pasir Tua",
+    "nameEn": "Dark Sand"
+  },
+  {
+    "hex": "#B5A285",
+    "nameId": "Pasir Tua",
+    "nameEn": "Khaki"
+  },
+  {
+    "hex": "#CDC5AA",
+    "nameId": "Krem Khaki",
+    "nameEn": "Dark Khaki Cream"
+  },
+  {
+    "hex": "#BDB76B",
+    "nameId": "Khaki Gelap",
+    "nameEn": "Dark Khaki"
+  },
+  {
+    "hex": "#2F4F4F",
+    "nameId": "Abu Batu Tulis Tua",
+    "nameEn": "Dark Slate Gray"
+  },
+  {
+    "hex": "#708090",
+    "nameId": "Abu Batu Tulis",
+    "nameEn": "Slate Gray"
+  },
+  {
+    "hex": "#778899",
+    "nameId": "Abu Batu Tulis Muda",
+    "nameEn": "Light Slate Gray"
+  },
+  {
+    "hex": "#B0BEC5",
+    "nameId": "Abu Biru Muda",
+    "nameEn": "Blue Gray Light"
+  },
+  {
+    "hex": "#90A4AE",
+    "nameId": "Abu Biru Sedang",
+    "nameEn": "Blue Gray Medium"
+  },
+  {
+    "hex": "#607D8B",
+    "nameId": "Abu Biru",
+    "nameEn": "Blue Gray"
+  },
+  {
+    "hex": "#455A64",
+    "nameId": "Abu Biru Tua",
+    "nameEn": "Dark Blue Gray"
+  },
+  {
+    "hex": "#263238",
+    "nameId": "Abu Biru Gelap",
+    "nameEn": "Very Dark Blue Gray"
+  },
+  {
+    "hex": "#CFD8DC",
+    "nameId": "Abu Biru Pucat",
+    "nameEn": "Pale Blue Gray"
+  },
+  {
+    "hex": "#ECEFF1",
+    "nameId": "Abu Biru Sangat Pucat",
+    "nameEn": "Very Pale Blue Gray"
+  },
+  {
+    "hex": "#9E9E9E",
+    "nameId": "Abu Netral",
+    "nameEn": "Neutral Gray"
+  },
+  {
+    "hex": "#757575",
+    "nameId": "Abu Netral Tua",
+    "nameEn": "Dark Neutral Gray"
+  },
+  {
+    "hex": "#616161",
+    "nameId": "Abu Netral Gelap",
+    "nameEn": "Very Dark Neutral Gray"
+  },
+  {
+    "hex": "#424242",
+    "nameId": "Abu Hampir Hitam",
+    "nameEn": "Almost Black Gray"
+  },
+  {
+    "hex": "#212121",
+    "nameId": "Abu Hitam Material",
+    "nameEn": "Material Black"
+  },
+  {
+    "hex": "#BDBDBD",
+    "nameId": "Abu Netral Muda",
+    "nameEn": "Light Neutral Gray"
+  },
+  {
+    "hex": "#E0E0E0",
+    "nameId": "Abu Sangat Muda",
+    "nameEn": "Very Light Gray"
+  },
+  {
+    "hex": "#FF5252",
+    "nameId": "Merah Aksen",
+    "nameEn": "Red Accent"
+  },
+  {
+    "hex": "#FF1744",
+    "nameId": "Merah Terang Aksen",
+    "nameEn": "Bright Red Accent"
+  },
+  {
+    "hex": "#D50000",
+    "nameId": "Merah Pekat Aksen",
+    "nameEn": "Deep Red Accent"
+  },
+  {
+    "hex": "#FF6D00",
+    "nameId": "Oranye Aksen",
+    "nameEn": "Orange Accent"
+  },
+  {
+    "hex": "#FFAB40",
+    "nameId": "Oranye Muda Aksen",
+    "nameEn": "Light Orange Accent"
+  },
+  {
+    "hex": "#FFD740",
+    "nameId": "Kuning Aksen",
+    "nameEn": "Yellow Accent"
+  },
+  {
+    "hex": "#FFE57F",
+    "nameId": "Kuning Muda Aksen",
+    "nameEn": "Light Yellow Accent"
+  },
+  {
+    "hex": "#69F0AE",
+    "nameId": "Hijau Aksen",
+    "nameEn": "Green Accent"
+  },
+  {
+    "hex": "#00E676",
+    "nameId": "Hijau Terang Aksen",
+    "nameEn": "Bright Green Accent"
+  },
+  {
+    "hex": "#00C853",
+    "nameId": "Hijau Pekat Aksen",
+    "nameEn": "Deep Green Accent"
+  },
+  {
+    "hex": "#40C4FF",
+    "nameId": "Biru Muda Aksen",
+    "nameEn": "Light Blue Accent"
+  },
+  {
+    "hex": "#00B0FF",
+    "nameId": "Biru Terang Aksen",
+    "nameEn": "Bright Blue Accent"
+  },
+  {
+    "hex": "#0091EA",
+    "nameId": "Biru Pekat Aksen",
+    "nameEn": "Deep Blue Accent"
+  },
+  {
+    "hex": "#E040FB",
+    "nameId": "Ungu Aksen",
+    "nameEn": "Purple Accent"
+  },
+  {
+    "hex": "#EA80FC",
+    "nameId": "Ungu Muda Aksen",
+    "nameEn": "Light Purple Accent"
+  },
+  {
+    "hex": "#D500F9",
+    "nameId": "Ungu Terang Aksen",
+    "nameEn": "Bright Purple Accent"
+  },
+  {
+    "hex": "#8B0000",
+    "nameId": "Merah Gelap Tua",
+    "nameEn": "Dark Red Deep"
+  },
+  {
+    "hex": "#A0153E",
+    "nameId": "Merah Anggur Tua",
+    "nameEn": "Wine Dark"
+  },
+  {
+    "hex": "#722F37",
+    "nameId": "Merah Anggur",
+    "nameEn": "Wine Red"
+  },
+  {
+    "hex": "#800020",
+    "nameId": "Burgundy",
+    "nameEn": "Burgundy"
+  },
+  {
+    "hex": "#990012",
+    "nameId": "Merah Tua Pekat",
+    "nameEn": "Cardinal Red"
+  },
+  {
+    "hex": "#C41E3A",
+    "nameId": "Merah Kardinal",
+    "nameEn": "Cardinal"
+  },
+  {
+    "hex": "#960018",
+    "nameId": "Merah Carmine",
+    "nameEn": "Carmine"
+  },
+  {
+    "hex": "#CC0033",
+    "nameId": "Merah Cerah Pekat",
+    "nameEn": "Bright Red Deep"
+  },
+  {
+    "hex": "#355E3B",
+    "nameId": "Hijau Hunter",
+    "nameEn": "Hunter Green"
+  },
+  {
+    "hex": "#4F7942",
+    "nameId": "Hijau Fern",
+    "nameEn": "Fern Green"
+  },
+  {
+    "hex": "#87A96B",
+    "nameId": "Hijau Asparagus",
+    "nameEn": "Asparagus"
+  },
+  {
+    "hex": "#ACE1AF",
+    "nameId": "Hijau Celadon",
+    "nameEn": "Celadon"
+  },
+  {
+    "hex": "#C8E6C9",
+    "nameId": "Hijau Pucat Material",
+    "nameEn": "Material Pale Green"
+  },
+  {
+    "hex": "#E8F5E9",
+    "nameId": "Hijau Sangat Pucat",
+    "nameEn": "Very Pale Green"
+  },
+  {
+    "hex": "#00897B",
+    "nameId": "Teal Terang",
+    "nameEn": "Light Teal"
+  },
+  {
+    "hex": "#00695C",
+    "nameId": "Teal Sedang",
+    "nameEn": "Medium Teal"
+  },
+  {
+    "hex": "#00BFA5",
+    "nameId": "Teal Aksen",
+    "nameEn": "Teal Accent"
+  },
+  {
+    "hex": "#1DE9B6",
+    "nameId": "Tosca Neon",
+    "nameEn": "Neon Teal"
+  },
+  {
+    "hex": "#64FFDA",
+    "nameId": "Tosca Terang",
+    "nameEn": "Bright Teal"
+  },
+  {
+    "hex": "#FFC107",
+    "nameId": "Kuning Matahari",
+    "nameEn": "Amber Sunflower"
+  },
+  {
+    "hex": "#FF6F00",
+    "nameId": "Kuning Oranye Pekat",
+    "nameEn": "Deep Amber"
+  },
+  {
+    "hex": "#FFD54F",
+    "nameId": "Kuning Matahari Muda",
+    "nameEn": "Light Amber"
+  },
+  {
+    "hex": "#FFE082",
+    "nameId": "Kuning Matahari Pucat",
+    "nameEn": "Pale Amber"
+  },
+  {
+    "hex": "#FFF8E1",
+    "nameId": "Kuning Krem Pucat",
+    "nameEn": "Very Pale Amber"
+  },
+  {
+    "hex": "#E0F2F1",
+    "nameId": "Teal Sangat Pucat",
+    "nameEn": "Very Pale Teal"
+  },
+  {
+    "hex": "#B2DFDB",
+    "nameId": "Teal Pucat",
+    "nameEn": "Pale Teal"
+  },
+  {
+    "hex": "#80CBC4",
+    "nameId": "Teal Muda",
+    "nameEn": "Light Teal Muted"
+  },
+  {
+    "hex": "#4DB6AC",
+    "nameId": "Teal Sedang Muda",
+    "nameEn": "Medium Light Teal"
+  },
+  {
+    "hex": "#26A69A",
+    "nameId": "Teal Sedang",
+    "nameEn": "Medium Teal"
+  },
+  {
+    "hex": "#FCF3CF",
+    "nameId": "Kuning Krim Muda",
+    "nameEn": "Light Cream Yellow"
+  },
+  {
+    "hex": "#F9E79F",
+    "nameId": "Kuning Krim",
+    "nameEn": "Cream Yellow"
+  },
+  {
+    "hex": "#F7DC6F",
+    "nameId": "Kuning Krim Sedang",
+    "nameEn": "Medium Cream Yellow"
+  },
+  {
+    "hex": "#F4D03F",
+    "nameId": "Kuning Sedang Cerah",
+    "nameEn": "Medium Bright Yellow"
+  },
+  {
+    "hex": "#F1C40F",
+    "nameId": "Kuning Cerah Matahari",
+    "nameEn": "Sunflower Yellow"
+  },
+  {
+    "hex": "#D4AC0D",
+    "nameId": "Kuning Keemasan",
+    "nameEn": "Golden Yellow"
+  },
+  {
+    "hex": "#FF9800",
+    "nameId": "Oranye Material",
+    "nameEn": "Material Orange"
+  },
+  {
+    "hex": "#E65100",
+    "nameId": "Oranye Material Pekat",
+    "nameEn": "Material Deep Orange"
+  },
+  {
+    "hex": "#FFB74D",
+    "nameId": "Oranye Material Muda",
+    "nameEn": "Material Light Orange"
+  },
+  {
+    "hex": "#FFCC02",
+    "nameId": "Kuning Material",
+    "nameEn": "Material Yellow"
+  },
+  {
+    "hex": "#AD1457",
+    "nameId": "Pink Material Tua",
+    "nameEn": "Material Medium Dark Pink"
+  },
+  {
+    "hex": "#D81B60",
+    "nameId": "Pink Material Sedang",
+    "nameEn": "Material Medium Pink"
+  },
+  {
+    "hex": "#F06292",
+    "nameId": "Pink Material Sedang Muda",
+    "nameEn": "Material Medium Light Pink"
+  },
+  {
+    "hex": "#F8BBD9",
+    "nameId": "Pink Material Pucat",
+    "nameEn": "Material Pale Pink"
+  },
+  {
+    "hex": "#6200EA",
+    "nameId": "Ungu Terang Material",
+    "nameEn": "Material Bright Purple"
+  },
+  {
+    "hex": "#AA00FF",
+    "nameId": "Ungu Neon Material",
+    "nameEn": "Material Neon Purple"
+  },
+  {
+    "hex": "#AB47BC",
+    "nameId": "Ungu Sedang Material",
+    "nameEn": "Material Medium Purple"
+  },
+  {
+    "hex": "#8E24AA",
+    "nameId": "Ungu Sedang Tua Material",
+    "nameEn": "Material Medium Dark Purple"
+  },
+  {
+    "hex": "#E1BEE7",
+    "nameId": "Ungu Pucat Material",
+    "nameEn": "Material Pale Purple"
+  },
+  {
+    "hex": "#3D5A80",
+    "nameId": "Biru Petrol",
+    "nameEn": "Petrol Blue"
+  },
+  {
+    "hex": "#2E4057",
+    "nameId": "Biru Tinta Tua",
+    "nameEn": "Dark Ink Blue"
+  },
+  {
+    "hex": "#1B3A5C",
+    "nameId": "Biru Tinta",
+    "nameEn": "Ink Blue"
+  },
+  {
+    "hex": "#5B8FA8",
+    "nameId": "Biru Abu",
+    "nameEn": "Gray Blue"
+  },
+  {
+    "hex": "#7BAFD4",
+    "nameId": "Biru Muda Abu",
+    "nameEn": "Light Gray Blue"
+  },
+  {
+    "hex": "#A8C5DA",
+    "nameId": "Biru Abu Pucat",
+    "nameEn": "Pale Gray Blue"
+  },
+  {
+    "hex": "#D0E4F0",
+    "nameId": "Biru Abu Sangat Pucat",
+    "nameEn": "Very Pale Gray Blue"
+  },
+  {
+    "hex": "#325D79",
+    "nameId": "Biru Laut Dalam",
+    "nameEn": "Deep Sea Blue"
+  },
+  {
+    "hex": "#0C7B93",
+    "nameId": "Biru Laut Sedang",
+    "nameEn": "Medium Sea Blue"
+  },
+  {
+    "hex": "#27496D",
+    "nameId": "Biru Laut Tua",
+    "nameEn": "Dark Sea Blue"
+  },
+  {
+    "hex": "#FF6E40",
+    "nameId": "Oranye Karang",
+    "nameEn": "Deep Coral Orange"
+  },
+  {
+    "hex": "#FFAB91",
+    "nameId": "Oranye Karang Muda",
+    "nameEn": "Light Deep Coral"
+  },
+  {
+    "hex": "#FBE9E7",
+    "nameId": "Karang Sangat Pucat",
+    "nameEn": "Very Pale Coral"
+  },
+  {
+    "hex": "#FF3D00",
+    "nameId": "Merah Oranye Terang",
+    "nameEn": "Bright Red Orange"
+  },
+  {
+    "hex": "#DD2C00",
+    "nameId": "Merah Oranye Tua",
+    "nameEn": "Dark Red Orange"
+  },
+  {
+    "hex": "#CDDC39",
+    "nameId": "Hijau Limau",
+    "nameEn": "Lime"
+  },
+  {
+    "hex": "#C0CA33",
+    "nameId": "Hijau Limau Tua",
+    "nameEn": "Dark Lime"
+  },
+  {
+    "hex": "#AFB42B",
+    "nameId": "Hijau Limau Gelap",
+    "nameEn": "Very Dark Lime"
+  },
+  {
+    "hex": "#9E9D24",
+    "nameId": "Hijau Limau Hitam",
+    "nameEn": "Black Lime"
+  },
+  {
+    "hex": "#827717",
+    "nameId": "Hijau Kuning Tua",
+    "nameEn": "Very Dark Yellow Green"
+  },
+  {
+    "hex": "#E6EE9C",
+    "nameId": "Hijau Limau Pucat",
+    "nameEn": "Pale Lime"
+  },
+  {
+    "hex": "#F0F4C3",
+    "nameId": "Hijau Limau Sangat Pucat",
+    "nameEn": "Very Pale Lime"
+  },
+  {
+    "hex": "#37474F",
+    "nameId": "Abu Biru Gelap",
+    "nameEn": "Blue Gray Deep"
+  },
+  {
+    "hex": "#546E7A",
+    "nameId": "Abu Biru Sedang",
+    "nameEn": "Blue Gray Mid"
+  },
+  {
+    "hex": "#78909C",
+    "nameId": "Abu Biru Terang",
+    "nameEn": "Blue Gray Bright"
+  },
+  {
+    "hex": "#A7FFEB",
+    "nameId": "Tosca Cerah Terang",
+    "nameEn": "Bright Light Teal"
+  },
+  {
+    "hex": "#84FFFF",
+    "nameId": "Tosca Neon Terang",
+    "nameEn": "Neon Light Cyan"
+  },
+  {
+    "hex": "#18FFFF",
+    "nameId": "Cyan Neon",
+    "nameEn": "Neon Cyan"
+  },
+  {
+    "hex": "#00E5FF",
+    "nameId": "Biru Tosca Cerah",
+    "nameEn": "Bright Cyan Blue"
+  },
+  {
+    "hex": "#00B8D4",
+    "nameId": "Biru Tosca Sedang",
+    "nameEn": "Medium Cyan Blue"
+  },
+  {
+    "hex": "#0097A7",
+    "nameId": "Biru Tosca Tua",
+    "nameEn": "Dark Cyan Blue"
+  },
+  {
+    "hex": "#006064",
+    "nameId": "Biru Tosca Gelap",
+    "nameEn": "Very Dark Cyan"
+  },
+  {
+    "hex": "#E0F7FA",
+    "nameId": "Biru Tosca Sangat Pucat",
+    "nameEn": "Very Pale Cyan"
+  },
+  {
+    "hex": "#B2EBF2",
+    "nameId": "Biru Tosca Pucat",
+    "nameEn": "Pale Cyan"
+  },
+  {
+    "hex": "#4DD0E1",
+    "nameId": "Biru Tosca Sedang Muda",
+    "nameEn": "Medium Light Cyan"
+  },
+  {
+    "hex": "#00ACC1",
+    "nameId": "Tosca Kuat",
+    "nameEn": "Strong Cyan"
+  },
+  {
+    "hex": "#E8EAF6",
+    "nameId": "Ungu Biru Sangat Pucat",
+    "nameEn": "Very Pale Indigo"
+  },
+  {
+    "hex": "#C5CAE9",
+    "nameId": "Ungu Biru Pucat",
+    "nameEn": "Pale Indigo"
+  },
+  {
+    "hex": "#9FA8DA",
+    "nameId": "Ungu Biru Muda",
+    "nameEn": "Light Indigo"
+  },
+  {
+    "hex": "#7986CB",
+    "nameId": "Ungu Biru Sedang Muda",
+    "nameEn": "Medium Light Indigo"
+  },
+  {
+    "hex": "#5C6BC0",
+    "nameId": "Ungu Biru Sedang",
+    "nameEn": "Medium Indigo"
+  },
+  {
+    "hex": "#3949AB",
+    "nameId": "Ungu Biru Sedang Tua",
+    "nameEn": "Medium Dark Indigo"
+  },
+  {
+    "hex": "#303F9F",
+    "nameId": "Ungu Biru Tua",
+    "nameEn": "Dark Indigo"
+  },
+  {
+    "hex": "#283593",
+    "nameId": "Ungu Biru Gelap",
+    "nameEn": "Very Dark Indigo"
+  },
+  {
+    "hex": "#1A237E",
+    "nameId": "Ungu Biru Hitam",
+    "nameEn": "Black Indigo"
+  },
+  {
+    "hex": "#8C9EFF",
+    "nameId": "Indigo Aksen Muda",
+    "nameEn": "Light Indigo Accent"
+  },
+  {
+    "hex": "#536DFE",
+    "nameId": "Indigo Aksen",
+    "nameEn": "Indigo Accent"
+  },
+  {
+    "hex": "#3D5AFE",
+    "nameId": "Indigo Aksen Kuat",
+    "nameEn": "Strong Indigo Accent"
+  },
+  {
+    "hex": "#FFF9C4",
+    "nameId": "Kuning Sangat Muda",
+    "nameEn": "Very Light Yellow"
+  },
+  {
+    "hex": "#FFF59D",
+    "nameId": "Kuning Muda Segar",
+    "nameEn": "Pale Yellow Fresh"
+  },
+  {
+    "hex": "#FFEB3B",
+    "nameId": "Kuning Material",
+    "nameEn": "Material Yellow"
+  },
+  {
+    "hex": "#FDD835",
+    "nameId": "Kuning Material Sedang",
+    "nameEn": "Material Medium Yellow"
+  },
+  {
+    "hex": "#F57F17",
+    "nameId": "Kuning Material Gelap",
+    "nameEn": "Material Very Dark Yellow"
+  },
+  {
+    "hex": "#89CFF0",
+    "nameId": "Biru Bayi",
+    "nameEn": "Baby Blue"
+  },
+  {
+    "hex": "#A2D5F2",
+    "nameId": "Biru Bayi Muda",
+    "nameEn": "Light Baby Blue"
+  },
+  {
+    "hex": "#5BA4CF",
+    "nameId": "Biru Cornflower Sedang",
+    "nameEn": "Medium Cornflower"
+  },
+  {
+    "hex": "#3A86FF",
+    "nameId": "Biru Cerah Vivid",
+    "nameEn": "Vivid Blue"
+  },
+  {
+    "hex": "#0077B6",
+    "nameId": "Biru Laut Cerah",
+    "nameEn": "Ocean Blue"
+  },
+  {
+    "hex": "#023E8A",
+    "nameId": "Biru Laut Tua Pekat",
+    "nameEn": "Deep Ocean Blue"
+  },
+  {
+    "hex": "#03045E",
+    "nameId": "Biru Tua Hampir Hitam",
+    "nameEn": "Almost Black Blue"
+  },
+  {
+    "hex": "#90E0EF",
+    "nameId": "Biru Terang Lembut",
+    "nameEn": "Soft Light Blue"
+  },
+  {
+    "hex": "#CAF0F8",
+    "nameId": "Biru Sangat Muda",
+    "nameEn": "Very Light Blue"
+  },
+  {
+    "hex": "#ADE8F4",
+    "nameId": "Biru Pucat Segar",
+    "nameEn": "Fresh Pale Blue"
+  },
+  {
+    "hex": "#F72585",
+    "nameId": "Pink Neon",
+    "nameEn": "Neon Pink"
+  },
+  {
+    "hex": "#B5179E",
+    "nameId": "Ungu Pink",
+    "nameEn": "Purple Pink"
+  },
+  {
+    "hex": "#7209B7",
+    "nameId": "Ungu Neon Tua",
+    "nameEn": "Dark Neon Purple"
+  },
+  {
+    "hex": "#560BAD",
+    "nameId": "Ungu Gelap Neon",
+    "nameEn": "Very Dark Neon Purple"
+  },
+  {
+    "hex": "#480CA8",
+    "nameId": "Ungu Pekat Neon",
+    "nameEn": "Deep Neon Purple"
+  },
+  {
+    "hex": "#3A0CA3",
+    "nameId": "Ungu Biru Neon",
+    "nameEn": "Neon Blue Purple"
+  },
+  {
+    "hex": "#3F37C9",
+    "nameId": "Biru Neon",
+    "nameEn": "Neon Blue"
+  },
+  {
+    "hex": "#4361EE",
+    "nameId": "Biru Elektrik",
+    "nameEn": "Electric Blue"
+  },
+  {
+    "hex": "#4CC9F0",
+    "nameId": "Biru Elektrik Muda",
+    "nameEn": "Light Electric Blue"
+  },
+  {
+    "hex": "#D4A5A5",
+    "nameId": "Merah Muda Pudar",
+    "nameEn": "Dusty Rose"
+  },
+  {
+    "hex": "#C4A4A4",
+    "nameId": "Merah Muda Pudar Tua",
+    "nameEn": "Old Rose"
+  },
+  {
+    "hex": "#CC9900",
+    "nameId": "Emas Tua",
+    "nameEn": "Old Gold"
+  },
+  {
+    "hex": "#FFC300",
+    "nameId": "Emas Cerah",
+    "nameEn": "Bright Gold"
+  },
+  {
+    "hex": "#C0A000",
+    "nameId": "Emas Redup",
+    "nameEn": "Muted Gold"
+  },
+  {
+    "hex": "#A07800",
+    "nameId": "Emas Gelap",
+    "nameEn": "Dark Gold"
+  },
+  {
+    "hex": "#C0C0C0",
+    "nameId": "Perak",
+    "nameEn": "Silver"
+  },
+  {
+    "hex": "#A9A9A9",
+    "nameId": "Perak Tua",
+    "nameEn": "Dark Silver"
+  },
+  {
+    "hex": "#D3D3D3",
+    "nameId": "Perak Muda",
+    "nameEn": "Light Silver"
+  },
+  {
+    "hex": "#E5E5E5",
+    "nameId": "Perak Pucat",
+    "nameEn": "Pale Silver"
+  },
+  {
+    "hex": "#F0F0F0",
+    "nameId": "Perak Sangat Pucat",
+    "nameEn": "Very Pale Silver"
+  },
+  {
+    "hex": "#FF33FF",
+    "nameId": "Fuchsia Muda",
+    "nameEn": "Light Fuchsia"
+  },
+  {
+    "hex": "#CC00CC",
+    "nameId": "Fuchsia Tua",
+    "nameEn": "Dark Fuchsia"
+  },
+  {
+    "hex": "#990099",
+    "nameId": "Ungu Fuchsia",
+    "nameEn": "Purple Fuchsia"
+  },
+  {
+    "hex": "#F1F8E9",
+    "nameId": "Hijau Limau Sangat Pucat",
+    "nameEn": "Very Pale Lime Green"
+  },
+  {
+    "hex": "#DCEDC8",
+    "nameId": "Hijau Limau Pucat",
+    "nameEn": "Pale Lime Green"
+  },
+  {
+    "hex": "#C5E1A5",
+    "nameId": "Hijau Limau Muda",
+    "nameEn": "Light Lime Green"
+  },
+  {
+    "hex": "#AED581",
+    "nameId": "Hijau Limau Sedang Muda",
+    "nameEn": "Medium Light Lime"
+  },
+  {
+    "hex": "#9CCC65",
+    "nameId": "Hijau Limau Sedang",
+    "nameEn": "Medium Lime Green"
+  },
+  {
+    "hex": "#8BC34A",
+    "nameId": "Hijau Limau Kuat",
+    "nameEn": "Strong Lime Green"
+  },
+  {
+    "hex": "#7CB342",
+    "nameId": "Hijau Limau Kuat Tua",
+    "nameEn": "Dark Strong Lime"
+  },
+  {
+    "hex": "#558B2F",
+    "nameId": "Hijau Limau Tua",
+    "nameEn": "Dark Lime Green"
+  },
+  {
+    "hex": "#33691E",
+    "nameId": "Hijau Limau Gelap",
+    "nameEn": "Very Dark Lime"
+  },
+  {
+    "hex": "#F9F9F9",
+    "nameId": "Putih Bersih",
+    "nameEn": "Clean White"
+  },
+  {
+    "hex": "#F8F9FA",
+    "nameId": "Putih Dingin",
+    "nameEn": "Cool White"
+  },
+  {
+    "hex": "#F0EAD6",
+    "nameId": "Putih Hangat",
+    "nameEn": "Warm White"
+  },
+  {
+    "hex": "#EDE0D4",
+    "nameId": "Krem Hangat Tua",
+    "nameEn": "Warm Cream Dark"
+  },
+  {
+    "hex": "#E6CCB2",
+    "nameId": "Krem Almond",
+    "nameEn": "Almond Cream"
+  },
+  {
+    "hex": "#DDB892",
+    "nameId": "Krem Cokelat Muda",
+    "nameEn": "Light Mocha"
+  },
+  {
+    "hex": "#B08968",
+    "nameId": "Krem Cokelat",
+    "nameEn": "Mocha"
+  },
+  {
+    "hex": "#9C6644",
+    "nameId": "Cokelat Mocha",
+    "nameEn": "Dark Mocha"
+  },
+  {
+    "hex": "#7F5539",
+    "nameId": "Cokelat Mocha Tua",
+    "nameEn": "Very Dark Mocha"
+  },
+  {
+    "hex": "#582F0E",
+    "nameId": "Cokelat Pekat Mocha",
+    "nameEn": "Deep Mocha"
+  },
+  {
+    "hex": "#5C4033",
+    "nameId": "Cokelat Gelap Tua",
+    "nameEn": "Dark Umber Brown"
+  },
+  {
+    "hex": "#3B1F14",
+    "nameId": "Cokelat Hampir Hitam",
+    "nameEn": "Nearly Black Brown"
+  },
+  {
+    "hex": "#7C5CBF",
+    "nameId": "Ungu Medium",
+    "nameEn": "Medium Violet"
+  },
+  {
+    "hex": "#9B59B6",
+    "nameId": "Ungu Amethyst",
+    "nameEn": "Amethyst"
+  },
+  {
+    "hex": "#6C3483",
+    "nameId": "Ungu Amethyst Tua",
+    "nameEn": "Dark Amethyst"
+  },
+  {
+    "hex": "#D2B4DE",
+    "nameId": "Ungu Amethyst Muda",
+    "nameEn": "Light Amethyst"
+  },
+  {
+    "hex": "#F5EEF8",
+    "nameId": "Ungu Sangat Pucat",
+    "nameEn": "Very Pale Violet"
+  },
+  {
+    "hex": "#1ABC9C",
+    "nameId": "Hijau Tosca Cerah",
+    "nameEn": "Turquoise Green"
+  },
+  {
+    "hex": "#16A085",
+    "nameId": "Hijau Tosca Tua",
+    "nameEn": "Dark Turquoise Green"
+  },
+  {
+    "hex": "#117A65",
+    "nameId": "Hijau Tosca Gelap",
+    "nameEn": "Very Dark Turquoise"
+  },
+  {
+    "hex": "#0E6655",
+    "nameId": "Hijau Tosca Hitam",
+    "nameEn": "Black Turquoise"
+  },
+  {
+    "hex": "#2ECC71",
+    "nameId": "Hijau Emerald Cerah",
+    "nameEn": "Bright Emerald"
+  },
+  {
+    "hex": "#27AE60",
+    "nameId": "Hijau Nephritis",
+    "nameEn": "Nephritis Green"
+  },
+  {
+    "hex": "#1E8449",
+    "nameId": "Hijau Pekat Tua",
+    "nameEn": "Dark Strong Green"
+  },
+  {
+    "hex": "#196F3D",
+    "nameId": "Hijau Pekat Gelap",
+    "nameEn": "Very Dark Strong Green"
+  },
+  {
+    "hex": "#F39C12",
+    "nameId": "Oranye Matahari",
+    "nameEn": "Sunflower Orange"
+  },
+  {
+    "hex": "#D68910",
+    "nameId": "Oranye Matahari Tua",
+    "nameEn": "Dark Sunflower"
+  },
+  {
+    "hex": "#B7770D",
+    "nameId": "Oranye Matahari Gelap",
+    "nameEn": "Very Dark Sunflower"
+  },
+  {
+    "hex": "#9A7D0A",
+    "nameId": "Oranye Matahari Hitam",
+    "nameEn": "Black Sunflower"
+  },
+  {
+    "hex": "#E67E22",
+    "nameId": "Oranye Wortel",
+    "nameEn": "Carrot Orange"
+  },
+  {
+    "hex": "#CA6F1E",
+    "nameId": "Oranye Wortel Tua",
+    "nameEn": "Dark Carrot"
+  },
+  {
+    "hex": "#A04000",
+    "nameId": "Oranye Wortel Gelap",
+    "nameEn": "Very Dark Carrot"
+  },
+  {
+    "hex": "#BDC3C7",
+    "nameId": "Abu Beton",
+    "nameEn": "Concrete Gray"
+  },
+  {
+    "hex": "#AAB7B8",
+    "nameId": "Abu Asbes",
+    "nameEn": "Asbestos Gray"
+  },
+  {
+    "hex": "#95A5A6",
+    "nameId": "Abu Baja",
+    "nameEn": "Steel Gray"
+  },
+  {
+    "hex": "#7F8C8D",
+    "nameId": "Abu Baja Tua",
+    "nameEn": "Dark Steel Gray"
+  },
+  {
+    "hex": "#626567",
+    "nameId": "Abu Tua Pekat",
+    "nameEn": "Deep Steel Gray"
+  },
+  {
+    "hex": "#515A5A",
+    "nameId": "Abu Gelap Tua",
+    "nameEn": "Very Dark Asbestos"
+  },
+  {
+    "hex": "#F0FFF0",
+    "nameId": "Putih Hijau",
+    "nameEn": "Honeydew"
+  },
+  {
+    "hex": "#E0FFE0",
+    "nameId": "Hijau Putih",
+    "nameEn": "Off Green White"
+  },
+  {
+    "hex": "#F0FFFF",
+    "nameId": "Putih Tosca",
+    "nameEn": "Azure White"
+  },
+  {
+    "hex": "#DFFFFF",
+    "nameId": "Tosca Putih",
+    "nameEn": "Off Cyan White"
+  },
+  {
+    "hex": "#FFF0F5",
+    "nameId": "Putih Pink",
+    "nameEn": "Lavender Blush"
+  },
+  {
+    "hex": "#FFE4E1",
+    "nameId": "Putih Peach",
+    "nameEn": "Misty Rose"
+  },
+  {
+    "hex": "#FF0080",
+    "nameId": "Merah Pink Neon",
+    "nameEn": "Neon Hot Pink"
+  },
+  {
+    "hex": "#FF80AB",
+    "nameId": "Pink Neon Muda",
+    "nameEn": "Neon Light Pink"
+  },
+  {
+    "hex": "#7C4DFF",
+    "nameId": "Ungu Dalam Terang",
+    "nameEn": "Bright Deep Purple"
+  },
+  {
+    "hex": "#651FFF",
+    "nameId": "Ungu Elektrik",
+    "nameEn": "Electric Purple"
+  },
+  {
+    "hex": "#6200FF",
+    "nameId": "Violet Elektrik",
+    "nameEn": "Electric Violet"
+  },
+  {
+    "hex": "#76FF03",
+    "nameId": "Hijau Neon Terang",
+    "nameEn": "Neon Light Green"
+  },
+  {
+    "hex": "#64DD17",
+    "nameId": "Hijau Neon Tua",
+    "nameEn": "Neon Dark Green"
+  },
+  {
+    "hex": "#CCFF90",
+    "nameId": "Hijau Neon Pucat",
+    "nameEn": "Pale Neon Green"
+  },
+  {
+    "hex": "#F4FF81",
+    "nameId": "Kuning Neon Pucat",
+    "nameEn": "Pale Neon Yellow"
+  },
+  {
+    "hex": "#EEFF41",
+    "nameId": "Kuning Neon",
+    "nameEn": "Neon Yellow"
+  },
+  {
+    "hex": "#C6FF00",
+    "nameId": "Hijau Kuning Neon",
+    "nameEn": "Neon Yellow Green"
+  },
+  {
+    "hex": "#FFD180",
+    "nameId": "Oranye Neon Muda",
+    "nameEn": "Pale Neon Orange"
+  }
+]
