@@ -778,3 +778,5 @@ body {
 [hidden] {
   display: none !important;
 }
+#video-feed { transform: scaleX(-1); }
+#crosshair-overlay { transform: scaleX(-1); }
