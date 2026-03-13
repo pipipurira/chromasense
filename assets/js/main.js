@@ -74,11 +74,12 @@ async function startCameraFlow(videoEl, crosshairCanvas) {
     const stream = await Camera.start(videoEl);
     AppState.activeStream = stream;
 
-    // FIX: Simpan deviceId kamera aktif sejak awal (bukan hanya saat switch)
+    // FIX: Simpan deviceId dan facingMode kamera aktif sejak awal
     const tracks = stream.getVideoTracks();
     if (tracks.length > 0) {
       const settings = tracks[0].getSettings();
       AppState.activeCameraId = settings.deviceId || null;
+      AppState.activeFacingMode = settings.facingMode || 'environment';
     }
 
     UI.hideCameraError();
@@ -314,21 +315,37 @@ async function handleSwitchCamera(videoEl) {
       return;
     }
 
-    // Cari kamera berikutnya
-    const currentId = AppState.activeCameraId;
-    const next = cameras.find(c => c.deviceId !== currentId) || cameras[0];
-
     // Stop stream lama terlebih dahulu
     if (AppState.activeStream) {
       Camera.stop(AppState.activeStream);
       AppState.activeStream = null;
     }
 
-    const stream = await Camera.startWithDeviceId(videoEl, next.deviceId);
-    AppState.activeStream = stream;
-    AppState.activeCameraId = next.deviceId;
+    // Toggle facingMode: lebih reliable di mobile daripada deviceId
+    // karena deviceId bisa berubah setelah stream di-stop
+    const currentFacing = AppState.activeFacingMode || 'environment';
+    const nextFacing = currentFacing === 'environment' ? 'user' : 'environment';
 
-    // FIX: Reset freeze state saat ganti kamera — video baru selalu berjalan
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: {
+        facingMode: { ideal: nextFacing },
+        width: { ideal: 1280 },
+        height: { ideal: 720 }
+      }
+    });
+
+    videoEl.srcObject = stream;
+    AppState.activeStream = stream;
+    AppState.activeFacingMode = nextFacing;
+
+    // Simpan deviceId baru
+    const tracks = stream.getVideoTracks();
+    if (tracks.length > 0) {
+      const settings = tracks[0].getSettings();
+      AppState.activeCameraId = settings.deviceId || null;
+    }
+
+    // FIX: Reset freeze state saat ganti kamera
     if (AppState.isFrozen) {
       AppState.isFrozen = false;
       UI.updateFreezeButton(false);
