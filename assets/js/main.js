@@ -83,11 +83,6 @@ async function startCameraFlow(videoEl, crosshairCanvas) {
 
     UI.hideCameraError();
 
-    // Mirror hanya untuk kamera depan
-    const isFront = Camera.isFrontCamera(stream);
-    document.getElementById('video-feed').style.transform = isFront ? 'scaleX(-1)' : 'scaleX(1)';
-    document.getElementById('crosshair-overlay').style.transform = isFront ? 'scaleX(-1)' : 'scaleX(1)';
-    AppState.isFrontCamera = isFront;
     // Sembunyikan placeholder, tampilkan video
     const placeholder = document.getElementById('camera-placeholder');
     if (placeholder) placeholder.hidden = true;
@@ -197,9 +192,7 @@ function handleVideoClick(event, videoEl, crosshairCanvas) {
   const rect = videoEl.getBoundingClientRect();
   const clickX = (event.clientX !== undefined ? event.clientX : event.pageX) - rect.left;
   const clickY = (event.clientY !== undefined ? event.clientY : event.pageY) - rect.top;
-  // Flip X crosshair agar sinkron dengan video yang di-mirror
-  const crosshairX = AppState.isFrontCamera ? rect.width - clickX : clickX;
-  UI.drawCrosshair(crosshairCanvas, crosshairX, clickY);
+  UI.drawCrosshair(crosshairCanvas, clickX, clickY);
 
   // Bangun ColorObject lengkap
   const colorObj = ColorEngine.buildColorObject(r, g, b, ColorDB.getAll());
@@ -235,12 +228,7 @@ function samplePixelFromVideo(event, videoEl) {
   // Scale koordinat tampilan → koordinat resolusi asli video
   const scaleX = videoEl.videoWidth / rect.width;
   const scaleY = videoEl.videoHeight / rect.height;
-  // Video di-mirror (scaleX(-1)), jadi koordinat X perlu di-flip agar
-  // pixel yang diambil sesuai dengan posisi yang terlihat di layar
-  const rawX = Math.round((clientX - rect.left) * scaleX);
-  const videoX = AppState.isFrontCamera
-    ? videoEl.videoWidth - 1 - rawX
-    : rawX;
+  const videoX = Math.round((clientX - rect.left) * scaleX);
   const videoY = Math.round((clientY - rect.top) * scaleY);
 
   // Canvas offscreen — tidak ditambahkan ke DOM
@@ -334,11 +322,7 @@ async function handleSwitchCamera(videoEl) {
       AppState.isFrozen = false;
       UI.updateFreezeButton(false);
     }
-    // Update mirror state sesuai kamera baru
-    const isFront = Camera.isFrontCamera(stream);
-    document.getElementById('video-feed').style.transform = isFront ? 'scaleX(-1)' : 'scaleX(1)';
-    document.getElementById('crosshair-overlay').style.transform = isFront ? 'scaleX(-1)' : 'scaleX(1)';
-    AppState.isFrontCamera = isFront;
+
     UI.showToast('Kamera diganti');
   } catch (err) {
     console.error('[ChromaSense] Gagal ganti kamera:', err);

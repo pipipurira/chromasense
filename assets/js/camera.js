@@ -96,10 +96,5 @@ window.Camera = {
   stop: stopCamera,
   getAvailableCameras,
   startWithDeviceId: (videoElement, deviceId) => startCamera(videoElement, deviceId),
-  isSupported: isMediaDevicesSupported,
-  isFrontCamera: (stream) => {
-    const track = stream?.getVideoTracks()[0];
-    const settings = track?.getSettings();
-    return settings?.facingMode === 'user';
-  }
+  isSupported: isMediaDevicesSupported
 };
