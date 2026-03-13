@@ -96,5 +96,13 @@ window.Camera = {
   stop: stopCamera,
   getAvailableCameras,
   startWithDeviceId: (videoElement, deviceId) => startCamera(videoElement, deviceId),
-  isSupported: isMediaDevicesSupported
+  isSupported: isMediaDevicesSupported,
+  // Deteksi apakah stream berasal dari kamera depan
+  isFrontCamera: (stream) => {
+    const track = stream?.getVideoTracks()[0];
+    const settings = track?.getSettings();
+    // facingMode 'user' = kamera depan, 'environment' = kamera belakang
+    // Jika facingMode tidak tersedia (webcam laptop), anggap sebagai front (perlu mirror)
+    return settings?.facingMode !== 'environment';
+  }
 };
